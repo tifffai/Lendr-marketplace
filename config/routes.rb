@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'pages/welcome'
   devise_for :users
   resources :comments
   resources :items
+  resources :charges
   root 'pages#welcome'
-  get 'items', to: 'items#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'categories', to: 'categories#index'
+  get 'categories/:id', to: 'categories#show'
+  get 'transactions', to: 'transactions#index'
+  get 'transactions/:id', to: 'transactions#show'
+
 end
