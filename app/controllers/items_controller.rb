@@ -72,8 +72,8 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :description, :terms, :price, :pickup_time, :street, :suburb, :state, :postcode)
-      # result[:price] = result[:price].to_f * 100.0
+      result = params.require(:item).permit(:name, :description, :terms, :price, :pickup_time, :street, :suburb, :state, :postcode, :image)
+      result[:price] = result[:price].to_f * 100.0
     end
 
     # def configure_permitted_parameters
