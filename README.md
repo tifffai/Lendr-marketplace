@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+By Linda Lai, Mat Watts and Tiffany Fai
