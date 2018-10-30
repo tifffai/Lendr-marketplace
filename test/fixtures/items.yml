@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  terms: MyText
+  price: 1
+  pickup_time: 2018-10-30 11:46:22
+  street: MyString
+  suburb: MyString
+  state: MyString
+  postcode: MyString
+
+two:
+  name: MyString
+  description: MyText
+  terms: MyText
+  price: 1
+  pickup_time: 2018-10-30 11:46:22
+  street: MyString
+  suburb: MyString
+  state: MyString
+  postcode: MyString
