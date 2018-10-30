@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  # before_action :configure_permitted_parameters, if: :devise_controller?, only: [:show]
+
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
@@ -76,7 +76,4 @@ class ItemsController < ApplicationController
       result[:price] = result[:price].to_f * 100.0
     end
 
-    # def configure_permitted_parameters
-    #   devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birthdate, :phone] )
-    # end
 end

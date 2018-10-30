@@ -7,7 +7,7 @@ class ChargesController < ApplicationController
       @item = Item.find(params[:item_id])
 
       # Sends email confirmation to user
-      # ProductMailer.with(user: current_user, product: @item).new_purchase.deliver_now
+      ItemMailer.with(user: current_user, item: @item).new_purchase.deliver_now
 
       customer = Stripe::Customer.create(
         :email => params[:stripeEmail],
