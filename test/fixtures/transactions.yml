@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2018-10-30
+  end_date: 2018-10-30
+  total_cost: 1
+  item_name: MyString
+
+two:
+  start_date: 2018-10-30
+  end_date: 2018-10-30
+  total_cost: 1
+  item_name: MyString
