@@ -19,13 +19,14 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    authorize @item
   end
 
   # POST /items
   # POST /items.json
   def create
     @item = Item.new(item_params)
-
+    @item.user = current_user
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
@@ -54,6 +55,7 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
+    authorize @item
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
@@ -69,6 +71,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:name, :description, :terms, :price, :pickup_time, :street, :suburb, :state, :postcode)
+      result = params.require(:item).permit(:name, :description, :terms, :price, :pickup_time, :street, :suburb, :state, :postcode :image)
+      result[:price] = result[:price].to_f * 100.0
     end
 end
