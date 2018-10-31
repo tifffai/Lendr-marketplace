@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
-    @item.user == current_user
+    @item.user = current_user
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
@@ -74,6 +74,7 @@ class ItemsController < ApplicationController
     def item_params
       result = params.require(:item).permit(:name, :description, :terms, :price, :pickup_time, :street, :suburb, :state, :postcode, :image)
       result[:price] = result[:price].to_f * 100.0
+      result
     end
 
 end

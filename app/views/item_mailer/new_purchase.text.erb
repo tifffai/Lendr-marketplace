@@ -1,0 +1,4 @@
+Congrats on your purchase!
+===============================================
+
+You have purchased  <%= @item.name %> for <%= number_to_currency(@item.price/100.0) %>. Please get in touch with <%= @item.user.first_name %> through email at <%= @item.user.email %>! 

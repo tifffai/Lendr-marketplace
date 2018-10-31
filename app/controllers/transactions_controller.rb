@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
     # GET /comments
     # GET /comments.json
     def index
-      @transaction = Trasaction.all
+      @transaction = Transaction.all
     end
   
     # GET /comments/1
