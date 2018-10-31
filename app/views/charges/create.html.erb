@@ -1,3 +1,4 @@
+<%# Lendr: Page showed to buyer after Stripe payment. %>
 <h2>Thanks, you paid
     <strong>
         <%= number_to_currency(@item.price/100) %>
@@ -8,4 +9,4 @@
      You rented <%= @item.name %>. A confirmation email will be sent to you shortly.  
 </p>
 
-<%= image_tag @item.image, width: '300'  
+<%= image_tag @item.image, width: '300' %>

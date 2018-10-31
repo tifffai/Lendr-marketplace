@@ -10,7 +10,7 @@
   <%= @item.description %>
 </p>
 
-
+<%# Lendr: Add image to display on a single Item page %>
 <%= image_tag @item.image, width: '300' %>
 
 <p>
@@ -20,6 +20,7 @@
 
 <p>
   <strong>Price:</strong>
+  <%# Lendr: Add styling for pricing to display correctly %>
   <%= number_to_currency(@item.price/100.0) %>
 </p>
 
@@ -49,6 +50,7 @@
 </p>
 
 <%= form_tag charges_path do %>
+  <%# Lendr: To add Stripe form for payment, add custom Item attributes  %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">

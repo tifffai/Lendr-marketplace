@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_30_225559) do
+ActiveRecord::Schema.define(version: 2018_10_31_070644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 2018_10_30_225559) do
     t.text "description"
     t.text "terms"
     t.integer "price"
-    t.time "pickup_time"
     t.string "street"
     t.string "suburb"
     t.string "state"
@@ -63,6 +62,9 @@ ActiveRecord::Schema.define(version: 2018_10_30_225559) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "category_id"
+    t.datetime "next_available"
+    t.index ["category_id"], name: "index_items_on_category_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
@@ -73,6 +75,12 @@ ActiveRecord::Schema.define(version: 2018_10_30_225559) do
     t.string "item_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "item_id"
+    t.bigint "owner_id"
+    t.bigint "borrower_id"
+    t.index ["borrower_id"], name: "index_transactions_on_borrower_id"
+    t.index ["item_id"], name: "index_transactions_on_item_id"
+    t.index ["owner_id"], name: "index_transactions_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -91,5 +99,9 @@ ActiveRecord::Schema.define(version: 2018_10_30_225559) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "items", "categories"
   add_foreign_key "items", "users"
+  add_foreign_key "transactions", "items"
+  add_foreign_key "transactions", "users", column: "borrower_id"
+  add_foreign_key "transactions", "users", column: "owner_id"
 end

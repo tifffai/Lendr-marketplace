@@ -10,9 +10,8 @@
   </head>
 
   <body>
+  <%# Lendr: Add Navigation links to appear on every view %>
     <nav>
-
-
       <% if user_signed_in? && %>
         <%= link_to('Welcome', root_path) %>
         <%= link_to('Categories', categories_path) %>
