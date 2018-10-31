@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+    # Lendr: Generated new Category controller
+    # Lendr: When show is called, runs the 'set_category' method
     before_action :set_category, only: [:show]
 
     # GET /comments
@@ -11,6 +13,5 @@ class CategoriesController < ApplicationController
     # GET /comments/1.json
     def show
     end
-
 
 end

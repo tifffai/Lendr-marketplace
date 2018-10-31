@@ -3,10 +3,11 @@ class ChargesController < ApplicationController
     end
 
     def create
-      # Lookup the item
+      # Lendr: As per Stripe documentation
+      # Lendr: To lookup an Item by id
       @item = Item.find(params[:item_id])
 
-      # Sends email confirmation to user
+      # Lendr: Sends email confirmation to user via Mailgun
       ItemMailer.with(user: current_user, item: @item).new_purchase.deliver_now
 
       customer = Stripe::Customer.create(
@@ -16,7 +17,9 @@ class ChargesController < ApplicationController
 
       charge = Stripe::Charge.create(
         :customer    => customer.id,
+        # Lendr: Set to show Item price
         :amount      => @item.price,
+        # Lendr: Set to show Item description
         :description => @item.description,
         :currency    => 'aud'
       )

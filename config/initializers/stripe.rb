@@ -1,3 +1,4 @@
+# Lendr: As per Stripe docs, add configuration settings for API key
 Rails.configuration.stripe = {
     :publishable_key => ENV['PUBLISHABLE_KEY'],
     :secret_key      => ENV['SECRET_KEY']

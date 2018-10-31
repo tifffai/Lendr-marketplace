@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-
+  # Lendr: Items created using scaffolding.
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    # Lendr: Pundit authorisation for item
     # authorize @item
   end
 
@@ -27,6 +28,7 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
+    # Lendr: Sets the seller of a new Item listing to current user.
     @item.user = current_user
     respond_to do |format|
       if @item.save
@@ -56,6 +58,7 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
+    # For Pundit authorisation
     # authorize @item
     @item.destroy
     respond_to do |format|
@@ -72,7 +75,9 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
+      # Lendr: Add :image as a permitted param for all other CRUD methods in Items to refer back to.
       result = params.require(:item).permit(:name, :description, :terms, :price, :pickup_time, :street, :suburb, :state, :postcode, :image)
+      # Lendr: So that resulting price will be converted to float.
       result[:price] = result[:price].to_f * 100.0
       result
     end

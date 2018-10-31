@@ -1,4 +1,5 @@
 class TransactionsController < ApplicationController
+    # Generated new Transactions controller
     before_action :set_transaction, only: [:show]
 
     # GET /comments
@@ -11,4 +12,5 @@ class TransactionsController < ApplicationController
     # GET /comments/1.json
     def show
     end
+    
 end
