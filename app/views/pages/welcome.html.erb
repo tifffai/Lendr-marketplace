@@ -1,2 +1,7 @@
-<h1>Lendr Welcome Page</h1>
-<p>Find me in app/views/pages/welcome.html.erb</p>
+<h3>Welcome to</h1>
+<h1>Lendr</h1>
+
+<p>Your online marketplace for sharing your pre-loved unused goods with strangers.</p>
+
+<%= link_to('Login', new_user_session_path) %>
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>
