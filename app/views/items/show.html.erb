@@ -11,7 +11,7 @@
 </p>
 
 <%# Lendr: Add image to display on a single Item page %>
-<%= image_tag @item.image, width: '300' %>
+<%= image_tag @item.image %>
 
 <p>
   <strong>Terms:</strong>
@@ -22,11 +22,6 @@
   <strong>Price:</strong>
   <%# Lendr: Add styling for pricing to display correctly %>
   <%= number_to_currency(@item.price/100.0) %>
-</p>
-
-<p>
-  <strong>Pickup time:</strong>
-  <%= @item.pickup_time %>
 </p>
 
 <p>
@@ -66,6 +61,30 @@
           data-currency="AUD"
           data-locale="auto"></script>
 <% end %>
+
+
+<%= form_for Comment.new, url: comments_path do |f| %>
+  <%= f.label :review %>
+  <%= f.text_field :review %>
+   <%= f.label :rating %>
+  <%= f.text_field :rating %>
+   <%= f.label :role %>
+  <%= f.text_field :role %>
+  <%= f.hidden_field(:item_id, value: @item.id) %>
+  <%= f.submit "Create" %>
+<% end %>
+
+<p>
+  <strong>Comments</strong>
+  <% @item.comments.each do |comment| %>
+    <div>
+      <%= comment.review %>
+      <p><em> posted by <strong><%= comment.user.email %> </strong></em></p>
+      <hr>
+    </div>
+  <% end %>
+
+</p>
 
 <% if @item.user == current_user %>  
   <%= link_to 'Edit', edit_item_path(@item) %> |
