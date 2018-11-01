@@ -4,4 +4,5 @@ class Item < ApplicationRecord
     belongs_to :category, required: false
     has_many :transactions
     has_one_attached :image
+    has_many :comments 
 end

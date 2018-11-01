@@ -1,4 +1,5 @@
 <%= form_with(model: item, local: true) do |form| %>
+
   <% if item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -40,11 +41,6 @@
     <%= form.text_field :price, value: number_with_precision((item.price||0)/100.0, :precision => 2) %>
   </div>
 
-  <%# Lendr: Remove custom Pickup Time field as no longer required %>
-  <div class="field">
-    <%= form.label :pickup_time %>
-    <%= form.time_select :pickup_time %>
-  </div>
 
   <div class="field">
     <%= form.label :street %>
