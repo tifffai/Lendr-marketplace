@@ -1,0 +1,48 @@
+<h1>User Dashboard</h1>
+
+<% if user_signed_in? %>
+
+    <h3>Welcome back, <%= current_user.first_name %>!</h3>
+
+    <h4>Account Settings</h4>
+        Name: <%= current_user.first_name %> <%= current_user.last_name %>
+    <br/>
+        Username: <%= current_user.email %>
+    <br/>
+        Update Profile: <%= link_to "Edit", edit_user_registration_path %>
+
+    <h4>My Loans (Owner)</h4>
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th> Price</th>
+            <th>Listing</th>
+        </tr>
+    <tbody>
+        <% current_user.items.each do |item| %>
+        <tr>
+            <td><%= item.name %> </td>
+            <td><%= item.description %> </td>
+            <td><%= item.price %> </td>
+            <td><%= link_to 'Show', item %></td>
+            <% if item.user == current_user %>
+                <td><%= link_to 'Edit', edit_item_path(item) %></td>
+                <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+        <% end %>
+        </tr>
+    </tbody>
+    </table>
+
+    <h4>My Rentals (Buyer)</h4>
+    <%= current_user.transactions.item_name %>
+
+    
+
+    <h4>My Reviews</h4>
+
+<% else %>
+    <p>Please login to view your User Profile</p>
+    <%# <%= link_to('Login', new_user_session_path) %>
+<% end %>
