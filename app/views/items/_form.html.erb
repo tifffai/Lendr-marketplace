@@ -12,30 +12,37 @@
     </div>
   <% end %>
 
-  <%# Lendr: Update custom field Name %>
+  <%# Lendr: Update custom form text field Name %>
   <div class="field">
     <%= form.label :item_name %>
     <%= form.text_field :name %>
   </div>
 
-  <%# Lendr: Add custom field for Image %>
+   <%# Lendr: Create a new custom form collection field Category, add dropdown menu. %>
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: false, prompt: "Select a category" %>
+  </div>
+
+  <%# Lendr: Add custom form file field for Image %>
   <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
 
+  <%# Lendr: Add custom form text area field for Description %>
   <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
   
-  <%# Lendr: Add custom field for Terms and Conditions %>
+  <%# Lendr: Add custom form text area field for Terms and Conditions %>
   <div class="field">
     <%= form.label :terms_and_conditions %>
     <%= form.text_area :terms %>
   </div>
 
-  <%# Lendr: Add formatting to display Price field correctly %>
+  <%# Lendr: Add formatting to display form text field for Price correctly %>
   <div class="field">
     <%= form.label :price %>
     <%= form.text_field :price, value: number_with_precision((item.price||0)/100.0, :precision => 2) %>

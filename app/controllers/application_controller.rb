@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    # Lendr: To permit additional parameters in the User table
+    # Lendr: To permit additional parameters in the User table.
     before_action :configure_permitted_parameters, if: :devise_controller?
 
     protected
