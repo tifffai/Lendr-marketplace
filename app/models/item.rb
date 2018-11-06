@@ -3,7 +3,7 @@ class Item < ApplicationRecord
     belongs_to :user, required: false
     belongs_to :category, required: false
     has_many :transactions
-    has_one_attached :image
+    has_many_attached :images
     has_many :comments 
 
     # Lendr: Add validations to ensure required data must be entered by user when creating a new item

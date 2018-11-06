@@ -80,7 +80,7 @@ class ItemsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
       # Lendr: Add :image as a permitted param for all other CRUD methods in Items to refer back to.
-      result = params.require(:item).permit(:name, :description, :terms, :price, :street, :suburb, :state, :postcode, :image)
+      result = params.require(:item).permit(:name, :description, :terms, :price, :street, :suburb, :state, :postcode, :next_available, images: [])
       # Lendr: So that resulting price will be converted to float.
       result[:price] = result[:price].to_f * 100.0
       result
