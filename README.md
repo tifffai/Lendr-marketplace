@@ -23,4 +23,4 @@ Things you may want to cover:
 
 * ...
 
-By Linda Lai, Mat Watts and Tiffany Fai
+By Linda Lai, Mat Watts and Tiffany Fai (November 2018)
