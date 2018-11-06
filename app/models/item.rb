@@ -21,8 +21,7 @@ class Item < ApplicationRecord
 
     def self.search(search)
         if search
-            where("name iLIKE ?", "%#{search}%")
-            where("description LIKE ?", "%#{search}%")
+            where("name iLIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%") 
         else
             all
         end

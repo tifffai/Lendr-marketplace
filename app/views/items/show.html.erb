@@ -125,15 +125,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 
 <script>
-  $(document).ready(function(){
+
+$(document).on('turbolinks:load', function() {
     $('.image-slider').slick({
-  dots: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1, 
-  speed: 300,
-  adaptiveHeight: true,
-  centerMode: true,
-});
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1, 
+    speed: 300,
+    adaptiveHeight: true,
+    centerMode: true,
   });
+});
+
 </script>
