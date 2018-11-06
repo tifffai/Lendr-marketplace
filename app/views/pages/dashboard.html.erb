@@ -2,12 +2,12 @@
 
 <% if user_signed_in? %>
 
-    <h3>Welcome back, <%= current_user.first_name %>!</h3>
+    <h3>Welcome back, <%= @user.first_name %>!</h3>
 
     <h4>Account Settings</h4>
-        Name: <%= current_user.first_name %> <%= current_user.last_name %>
+        Name: <%= @user.first_name %> <%= @user.last_name %>
     <br/>
-        Username: <%= current_user.email %>
+        Username: <%= @user.email %>
     <br/>
         Update Profile: <%= link_to "Edit", edit_user_registration_path %>
 
@@ -16,11 +16,10 @@
         <tr>
             <th>Item Name</th>
             <th>Item Description</th>
-            <th> Price</th>
-            <th>Listing</th>
+            <th>Price</th>
         </tr>
     <tbody>
-        <% current_user.items.each do |item| %>
+        <% @user.items.each do |item| %>
         <tr>
             <td><%= item.name %> </td>
             <td><%= item.description %> </td>
@@ -35,8 +34,29 @@
     </tbody>
     </table>
 
-    <%# <h4>My Rentals (Buyer)</h4>
-    <%= current_user.transactions.item_name %> %>
+    <h4>My Rentals (Buyer)</h4>
+
+    <table>
+        <tr>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th>Price</th>
+        </tr>
+    <tbody>
+        <% @user_transaction.each do |transaction| %>
+        <tr>
+            <td><%= transaction.item.name %> </td>
+            <td><%= transaction.item.description %> </td>
+            <td><%= transaction.item.price %> </td>
+            <td><%= link_to 'Show', transaction %></td>
+            <td><%= link_to 'Edit', edit_item_path(transaction.item) %></td>
+            <td><%= link_to 'Destroy', transaction.item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <% end %>
+
+        </tr>
+    </tbody>
+    </table>
 
     
 
