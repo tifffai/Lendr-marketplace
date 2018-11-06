@@ -1,5 +1,6 @@
 class TransactionsController < ApplicationController
   
+
   def index
     @transactions = Transaction.all
   end
@@ -36,5 +37,4 @@ class TransactionsController < ApplicationController
     result[:total_cost] = result[:total_cost].to_f * 100.0
     result
   end
-    
 end

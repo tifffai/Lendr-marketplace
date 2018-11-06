@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-    # Lendr: Establishes association - an item belongs to single user, a single category and a single image, and is associated with many transactions and comments.
+    # Lendr: Establishes association - an item belongs to single user, a single category and multiple images, and is associated with many transactions and comments.
     belongs_to :user, required: false
     belongs_to :category, required: false
     has_many :transactions
@@ -17,5 +17,15 @@ class Item < ApplicationRecord
         if image.attached? == false
             errors.add(:images, 'are missing, please add photo of your listing item.')
         end
-    end    
+    end 
+
+    def self.search(search)
+        if search
+            where("name iLIKE ?", "%#{search}%")
+            where("description LIKE ?", "%#{search}%")
+        else
+            all
+        end
+    end
+
 end
