@@ -15,13 +15,13 @@
   <%# Lendr: Update custom form text field Name %>
   <div class="field">
     <%= form.label :item_name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, size: "50"%>
   </div>
 
    <%# Lendr: Create a new custom form collection field Category, add dropdown menu. %>
- <div class="field">
+  <div class="field">
     <%= form.label :category %>
-    <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true, prompt: "Select a category" %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: false, prompt: "Select a category" %>
   </div>
 
   <%# Lendr: Add custom form text area field for Description %>

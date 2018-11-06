@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+
 <p id="notice"><%= notice %></p>
 
 <h1>Item Listing</h1>
@@ -22,17 +26,16 @@
   <%= @item.terms %>
 </p>
 
-<%# Lendr: Display multiple images to Item page %>
+<div class="image-slider">
   <% @item.images.each do |image| %>
     <div>
       <%= image_tag(image, height: '400') %>
     </div>
   <% end %>
-
+</div>
 
 <p>
   <strong>Price:</strong>
-  <%# Lendr: Add styling for pricing to display correctly %>
   <%= number_to_currency(@item.price/100.0) %>
 </p>
 
@@ -61,6 +64,8 @@
   <%= @item.next_available %>
 </p>
 
+
+
 <h2>Rent Now</h2>
 
 <% if @item.next_available < Time.now %>
@@ -75,7 +80,6 @@
         <% end %>
       </article>
       <%= hidden_field_tag(:item_id, @item.id) %>
-        <%# Lendr: To add Stripe form for payment, add custom Item attributes  %>
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
               data-description="<%= @item.name %>"
@@ -99,7 +103,7 @@
   <% @item.comments.each do |comment| %>
     <div>
       <%= comment.review %>
-      <%= comment.ratings %>
+      <%= comment.rating %>
       <p><em> posted by <strong><%= comment.user.email %> </strong></em></p>
       <hr>
     </div>
@@ -112,3 +116,24 @@
   <%= link_to 'Edit', edit_item_path(@item) %> |
 <% end %>
 <%= link_to 'Back', items_path %>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.image-slider').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1, 
+  speed: 300,
+  adaptiveHeight: true,
+  centerMode: true,
+});
+  });
+</script>

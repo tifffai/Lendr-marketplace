@@ -33,7 +33,6 @@ class ItemsController < ApplicationController
     # Lendr: When a new Item is created, it assigns the Category to the Category FK in the Item database.
     category = Category.find(params[:item][:category_id])
     @item.category = category
-    
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }

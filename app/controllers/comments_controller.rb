@@ -25,7 +25,6 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
-    # Lendr: By default, the owner of a comment is set to the current user
     @comment.user = current_user
     respond_to do |format|
       if @comment.save

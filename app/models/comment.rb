@@ -1,5 +1,8 @@
 class Comment < ApplicationRecord
-    # belongs_to :transaction
+    belongs_to :item
     belongs_to :user
-    belongs_to :item 
+
+    validates :review, presence: true
+    validates :rating, presence: true
+
 end

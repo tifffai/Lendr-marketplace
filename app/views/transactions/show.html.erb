@@ -1,1 +1,52 @@
-<h1>Transaction Show Page</h1>
+<h1>Transactions#show</h1>
+<p>Find me in app/views/transactions/show.html.erb</p>
+
+<p>
+  <strong>Item ID:</strong>
+  <%= @transaction.id %>
+</p>
+<p>
+  <strong>Item:</strong>
+  <%= @transaction.item_name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @transaction.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @transaction.end_date %>
+</p>
+
+<p>
+  <strong>Total Cost:</strong>
+  <%= @transaction.total_cost %>
+</p>
+
+<p>
+  <strong>Purchased on:</strong>
+  <%= @transaction.created_at %>
+</p>
+
+<p>
+  <strong>Item owner:</strong>
+  <%= @transaction.owner_id %>
+</p>
+
+<p>
+  <strong>Item borrower:</strong>
+  <%= @transaction.borrower_id %>
+</p>
+
+<h2>Add Comment</h2>
+
+<%= form_for Comment.new, url: comments_path do |f| %>
+  <%= f.label :review %>
+  <%= f.text_field :review %>
+   <%= f.label :rating %>
+  <%= f.text_field :rating %>
+  <%= f.hidden_field(:item_id, value: @transaction.item.id) %>
+  <p><%= f.submit "Create" %></p>
+<% end %>
