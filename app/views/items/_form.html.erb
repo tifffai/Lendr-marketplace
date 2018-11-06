@@ -19,35 +19,38 @@
   </div>
 
    <%# Lendr: Create a new custom form collection field Category, add dropdown menu. %>
-  <div class="field">
+ <div class="field">
     <%= form.label :category %>
-    <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: false, prompt: "Select a category" %>
-  </div>
-
-  <%# Lendr: Add custom form file field for Image %>
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true, prompt: "Select a category" %>
   </div>
 
   <%# Lendr: Add custom form text area field for Description %>
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, placeholder: "A short description of the item you would like to lend.", size: "50x5"  %>
   </div>
   
   <%# Lendr: Add custom form text area field for Terms and Conditions %>
   <div class="field">
     <%= form.label :terms_and_conditions %>
-    <%= form.text_area :terms %>
+    <%= form.text_area :terms, placeholder: "You may clarify your terms and conditions for lending out this listed item, from minimum days to be rented to condition.", size: "50x5" %>
   </div>
 
+  <%# Lendr: Add custom form file field for Image, allow for multiple images to be uploaded. %>
+  <div class="field">
+    <p>
+      <%= form.label :images %>
+        <small>(You may select multiple images to upload, file formats must be: jpeg, gif, png, bmp)</small>
+    </p>
+    <%= form.file_field :images, multiple: true, accept: 'image/png,image/gif,image/jpeg,image/bmp' %>
+  </div>
+
+    
   <%# Lendr: Add formatting to display form text field for Price correctly %>
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price, value: number_with_precision((item.price||0)/100.0, :precision => 2) %>
+    <%= form.label :price_per_day %>
+    <%= form.number_field :price, value: number_with_precision((item.price||0)/100.0, :precision => 2), step: :any %>
   </div>
-
 
   <div class="field">
     <%= form.label :street %>
@@ -67,6 +70,12 @@
   <div class="field">
     <%= form.label :postcode %>
     <%= form.text_field :postcode %>
+  </div>
+
+  <%# Lendr: Add custom form date field for Next Available status displayed by day, month, year  %>
+  <div class="field">
+    <%= form.label :next_available %>
+    <%= form.date_select :next_available,:order => [:day, :month, :year] %>
   </div>
 
   <div class="actions">
