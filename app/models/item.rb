@@ -5,4 +5,17 @@ class Item < ApplicationRecord
     has_many :transactions
     has_one_attached :image
     has_many :comments 
+
+    # Lendr: Add validations to ensure required data must be entered by user when creating a new item
+    validates :name, presence: true
+    validates :category, presence: true
+    validates :description, presence: true
+    validates :price, presence: true
+
+    private
+    def image_type
+        if image.attached? == false
+            errors.add(:images, 'are missing, please add photo of your listing item.')
+        end
+    end    
 end
