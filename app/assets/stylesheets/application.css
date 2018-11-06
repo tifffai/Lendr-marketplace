@@ -27,3 +27,23 @@ body {
     justify-content: flex-end;
     width: 80;
 }
+
+.image-slider .slick-slide {
+    text-align: center;
+}
+
+.image-slider .slick-slide::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.image-slider .slick-slide img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.image-slider .slick-prev:before, .image-slider .slick-next:before {
+    color: #000;
+}
