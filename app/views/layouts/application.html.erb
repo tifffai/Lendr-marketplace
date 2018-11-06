@@ -11,18 +11,22 @@
 
   <body>
   <%# Lendr: Add Navigation links to appear on every view %>
+
+    <div class='home-logo-box'>
+      <%= link_to image_tag('https://vectr.com/tbluebox/doywHHLE.svg?width=640&height=640&select=b2aib1kYa7', width: 80), root_path, :alt => "Home Page" %>
+    </div>
+
     <nav>
-      <% if user_signed_in? && %>
-        <%= link_to('Welcome', root_path) %>
-        <%= link_to('Categories', categories_path) %>
-        <%= link_to('New Listing', new_item_path) %>
-        <%= link_to('All Listings', items_path) %>
-        <%= link_to('User Dashboard', dashboard_path) %>
+      <% if user_signed_in? %>
+        <%= link_to('Browse', categories_path) %>
+        <%= link_to('View All', items_path) %>
+        <%= link_to('Post New', new_item_path) %>
+        <%= link_to('Dashboard', dashboard_path) %>
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
       <% else %>
         <%= link_to('Welcome', root_path) %>
-        <%= link_to('Categories', categories_path) %>
-        <%= link_to('Login', new_user_session_path)  %> 
+        <%= link_to('Browse', categories_path) %>
+        <%= link_to('View All', items_path) %>
       <% end %>
     </nav>
 

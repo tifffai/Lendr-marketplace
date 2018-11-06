@@ -24,9 +24,30 @@ class ChargesController < ApplicationController
         :currency    => 'aud'
       )
 
+      @item.next_available = Time.now + 24.hours
+      @item.save
+  
+      transaction = Transaction.create(
+        item_name: @item.name, 
+        start_date: Time.now,
+        end_date: Time.now + 24.hours,
+        total_cost: @item.price.to_f * 100.0,
+        borrower_id: current_user.id, 
+        owner_id: @item.user.id, 
+        item_id: @item.id
+      )
+
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_charge_path
+    end
+
+    private
+
+    def item_params
+      result = params.require(:item).permit(:name, :description, :terms, :price, :street, :suburb, :state, :postcode, :next_available, images: [])
+      result[:price] = result[:price].to_f * 100.0
+      result
     end
 
 end

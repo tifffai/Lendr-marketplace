@@ -61,26 +61,6 @@
   <%= @item.next_available %>
 </p>
 
-
-
-<%= form_tag charges_path do %>
-  <%# Lendr: To add Stripe form for payment, add custom Item attributes  %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-  </article>
-  <%= hidden_field_tag(:item_id, @item.id) %>
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="<%= @item.name %>"
-          data-amount="<%= @item.price %>"
-          data-currency="AUD"
-          data-locale="auto"></script>
-<% end %>
-
 <h2>Rent Now</h2>
 
 <% if @item.next_available < Time.now %>
@@ -95,6 +75,7 @@
         <% end %>
       </article>
       <%= hidden_field_tag(:item_id, @item.id) %>
+        <%# Lendr: To add Stripe form for payment, add custom Item attributes  %>
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
               data-description="<%= @item.name %>"
