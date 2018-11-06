@@ -17,5 +17,15 @@ class Item < ApplicationRecord
         if image.attached? == false
             errors.add(:images, 'are missing, please add photo of your listing item.')
         end
-    end    
+    end 
+
+    def self.search(search)
+        if search
+            where("name iLIKE ?", "%#{search}%")
+            where("description LIKE ?", "%#{search}%")
+        else
+            all
+        end
+    end
+
 end
