@@ -1,6 +1,11 @@
 class CategoriesController < ApplicationController
 
     def index
+      # @file = Rails.root.join('db','icons', '1.png')
+      
+      # @icons = []
+      # @icon = File.open(file)
+
       @categories = Category.all
 
     end

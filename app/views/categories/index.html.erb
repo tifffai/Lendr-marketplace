@@ -1,14 +1,24 @@
-<h1>Categories#index</h1>
-<br />
+<div class="category-show-page">
 
-<%= form_tag("/items", method: "get") do %>
-  <%= label_tag(:search, "Search for:") %>
-  <%= text_field_tag(:search) %>
-  <%= submit_tag("Search") %>
-<% end %>
+    <h1>What are you looking for today?</h1>
 
-<% @categories.each do |category| %>
-    <div>
-        <h3><%= link_to category.name, category %></h3>
+    <br/>
+
+    <%= form_tag("/items", method: "get") do %>
+        <%= label_tag(:search, "Search for:") %>
+        <%= text_field_tag(:search) %>
+        <%= submit_tag("Search") %>
+    <% end %>
+
+    <div class="categories-container">
+
+    <% @categories.each do |category| %>
+        <div class="category-card">
+            <%= link_to ( image_tag "#{category.name.downcase}.svg"), category %>
+            <h3 class="category-title"><%= link_to category.name, category %></h3>
+        </div>
+    <% end %>
+
     </div>
-<% end %>
+
+</div>
