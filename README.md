@@ -1,6 +1,13 @@
-# Lendr
+# LENDR
+## Help others, help yourself.
 ### https://tranquil-reaches-18328.herokuapp.com/
-Lendr is a community-driven two-sided marketplace that lets you rent out your belongings to others nearby. Everyday, we connect people who need things, with others in your neighbourhood that have it to lend.
+## About Lendr
+Lendr is a community-driven two-sided marketplace that lets you rent out your belongings to others nearby. Everyday, we connect Australians who need things, with others in your neighbourhood that have it to lend. Our vision is to provide a platform where anyone and anything - from the everyday to special occasion - can be borrowed quickly and easily without needing to break the bank or buy more stuff.
+
+Help others, help yourself. Win-win.
+
+### Lendr Features:
+* _Lend out and Borrow Items_: 
 
 [![Lendr](/app/assets/readme/intro-lendr.png)](https://tranquil-reaches-18328.herokuapp.com) 
 
@@ -46,29 +53,66 @@ https://github.com/thlorenz/doctoc
 - **[Conclusion](#Conclusion)**
 
 ## <a id="Challenge"></a>Challenge
-1. What is the need (i.e. challenge) that you will be addressing in your project?
-    * There are many items that we need occasionally but is costly or (cumbersome) to store - occasional but important use case (e.g. power drills, camping gear).
-    * People want use things but not own things necessarily; alternatively people have many items in storage that aren’t used very often.
-    * Declutter storage space in home - someone else stores it until you need to use it as the owner.
-    * Alternative to throwing away goods in hard rubbish.
+*What is the need (i.e. challenge) that you will be addressing in your project?*
+
+In a bygone era of conspicuous consumption, we were conditioned to believe that a need to use something had to mean ownership or accumulation - rather than the reality: _access_.
+
+Between everyday essentials and most prized possessions is that awkward range of important but infrequently used stuff that we don't want to splash out extravagantly for or waste precious space storing (think travel luggage, power drills, camping gear, that extra fridge, and so on) - well then, what's the solution?
+
+Enter Lendr.
+
+Following on from the old adage of borrowing a cup of sugar from your next door neighbour, here at Lendr we wondered why this couldn't this apply to well...everywhere and everything?
+
+As a counterargument to the constant bombardment of nudges to buy, own, collect and (let's be honest) discard stuff that does a great job gathering dust on your shelf, languishing in your garage, piling up landfill or used once, Lendr taps into the current milieu to share rather than own, while empowering you to put your goods to work.
 
 ## <a id="Problem"></a>Problem
-2. Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
-    * We are providing a two-sided marketplace space that taps into the our current generations needs to share rather than own.
-    * Many people buy products and store them away without using these products for long period of time.
-    * Current market has too many products that no single household would ever be able to have it all, this app enables everyone to share and have access to each others products.
-    * We have conditioned to go for the new shiny thing and to discard older but perfectly functional goods - things that still have a lot of shelf life left.
+*Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?*
+
+Though access and connectivity to people and things has never been greater, simultaneously we're time-poor, distracted, our wallet needs to stretch just a bit further and the planet is choking from cheaply-made, mass-produced items. 
+
+While in the past things were built to last and updated based on needs rather than wants, today we have been conditioned to go for the new shiny thing and to discard older but perfectly functional belongings - things that are of little or no immediate use to us but with a lot of shelf life left in it.
+
+Instead of scouring through shops and having to buy/resell niche items after use or chasing vendors for specialised rentals, we envision a one-stop meeting place that allows you to get to the good stuff, get it quickly and get it done - on your terms.
+
+Instead of wasting space or money for storage or discarding unused or cumbersome items in landfill, why not declutter your home and have someone else pay you to use and store it elsewhere until you need it again as the owner - on your terms?
+
+By empowering users to act as owners and borrowers on Lendr, we allow people to work together to make each others lives (and the world) a more efficient place by making it quick and easy for them to share their belongings.
+
+Why?
+
+_Side Hustle, yo!_ We all have stuff that can be onverted to cold, hard cash. By renting our your belongings through Lendr, you make your stuff work for you, and save yourself the time, space and dollars required to make room for things you don't need.
+
+_Encourage a more circular and sharing economy_.
+Instead of the usual vicious make, use, dispose cycle, keep your specialised and niche items in use for as long as possible. Extract the maximum value from your belongings by keeping them available but out of sight until you need it again.
+
+_Reduce environmental impact and encourage sustainability_.
+Put the brakes on excessive landfill, unnecessary mass-manufacturing and labour-intensive systems by sharing instead of buying or discarding.
+
+_Promote experiences, not things_. 
+Call it minimalist, zero-waste or common sense living - let go of all the unnecessary clutter and be forced to consider what you really need to own instead of really need to use. With borrowing and sharing now a legitimate and normalised alternative to buying, you can aim for quality over quality, or try before you decide to buy.
+
+_Community_. Make useful connections with people close by and find what you need, quickly, locally and efficiently. Instead of helping the big end of town, find someone you like and trust to give your hard earned dollars over to.
 
 ## <a id="Solution"></a>Solution
-3. Describe the project will you be conducting and how your App will address the needs.
-    * Our app adheres to circular economy practices.
-    * Facilitates sharing so that...
+_Describe the project will you be conducting and how your App will address the needs._
+As a community-orientated two-sided marketplace, Lendr lets you help others, help yourself and help the environment by eliminating the need for ownership and making your stuff work for you instead of the other way around. 
 
-    Sharing Economy
-    * They discussed their vision of a fairer, lower-carbon, more transparent,participatory and socially-connected economy, and whether those goals are consistent with the actions of the large, moneyed players—the successful platforms and the venture capitalists who are backing them with vast sums of finance.
-    * Lendr lets you help others, help yourself and help the environment by eliminating the need for ownership 
-    * Help others, help yourself. Win-win.
-    * We strive to connect people who share a similar desire and commitment to reduce waste.
+Our vision is to provide a fairer, lower-carbon, more transparent, participatory and socially-connected form of economy by encouraging peer-to-peer transactions/interactions in a secure and single meeting place. Through these transactions and interaction, Lendr users (acting as owners and/or lenders) can not only provide ample feedback reciprocally but also provide and/or find competitive prices compared to traditional sellers or renters for specialised or niche items.
+
+A community-oriented two-sided marketplace creates an atmosphere of expertise and enthusiasm among comic culture buyers and hobbyists. It will not only provide ample feedback to sellers, but it will also incorporate better prices for buyers as they are guided by a specialised community.
+
+The process is simple:
+1. _Find._
+Search for what you need, for a specific item or general category.
+
+2. _Book._
+Book the item for your specified days and contact the owner to validate terms.
+
+3. _Collect._
+Arrange collection from the owner - use, enjoy.
+
+1. _Return._
+Return the item to the lender per the agreed terms and timeframe, and leave them a review.
 
 ## <a id="Application"></a>Application
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
@@ -226,6 +270,11 @@ https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/busine
 ### <a id="Future-Enhancements"></a>Future Enhancements
 * Make the code DRY
 * Geocoder
+
+### <a id="Ethical-Considerations"></a>Ethical Considerations
+* Prohibited Items: single use items, living creatures, etc.
+* Malicious Use
+* Insurance/Fraud
 
 ### <a id="The-Pitch"></a>The Pitch
 * Attach PowerPoint Presentation
