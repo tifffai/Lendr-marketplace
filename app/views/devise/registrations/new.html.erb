@@ -29,7 +29,7 @@
   <%# Lendr: Add custom field for Phone Number %>
   <div class="field">
     <%= f.label :phone %><br />
-    <%= f.text_field :phone, autofocus: true, autocomplete: "phone" %>
+    <%= f.text_field :phone, autofocus: true, autocomplete: "phone", minlength: 10 , maxlength: 20 %>
   </div>
 
   <div class="field">

@@ -40,11 +40,6 @@
 </p>
 
 <p>
-  <strong>Street:</strong>
-  <%= @item.street %>
-</p>
-
-<p>
   <strong>Suburb:</strong>
   <%= @item.suburb %>
 </p>
@@ -53,17 +48,6 @@
   <strong>State:</strong>
   <%= @item.state %>
 </p>
-
-<p>
-  <strong>Postcode:</strong>
-  <%= @item.postcode %>
-</p>
-
-<p>
-  <strong>Next available:</strong>
-  <%= @item.next_available %>
-</p>
-
 
 
 <h2>Rent Now</h2>
@@ -96,14 +80,13 @@
 <hr>
 <br>
 
-<h2>Comments</h2>
+<h3>Comments</h3>
 
 <p>
-  <strong>Comments</strong>
   <% @item.comments.each do |comment| %>
     <div>
       <%= comment.review %>
-      <%= comment.rating %>
+      <p><em>Rating: <strong><%= comment.rating %></strong></em></p>
       <p><em> posted by <strong><%= comment.user.email %> </strong></em></p>
       <hr>
     </div>
@@ -118,24 +101,3 @@
 <%= link_to 'Back', items_path %>
 
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-
-<script>
-
-$(document).on('turbolinks:load', function() {
-    $('.image-slider').slick({
-    dots: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1, 
-    speed: 300,
-    adaptiveHeight: true,
-    centerMode: true,
-  });
-});
-
-</script>

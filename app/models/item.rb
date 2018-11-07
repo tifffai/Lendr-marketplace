@@ -15,7 +15,7 @@ class Item < ApplicationRecord
     private
     def image_type
         if image.attached? == false
-            errors.add(:images, 'are missing, please add photo of your listing item.')
+            errors.add(:images, 'are missing, please add photo(s) of your listed item.')
         end
     end 
 

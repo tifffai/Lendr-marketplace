@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
     # Lendr: Redirects to Categories page after successful login.
     def after_sign_in_path_for(resource)
-      categories_path
+      categories_path(resource)
     end
 
 end

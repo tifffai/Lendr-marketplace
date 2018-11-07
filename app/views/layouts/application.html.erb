@@ -9,12 +9,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
   <%# Lendr: Add Navigation links to appear on every view %>
-
-    <div class='home-logo-box'>
-      <%= link_to image_tag('LendR_logo_grey.svg', width: 80), root_path, :alt => "Home Page" %>
-    </div>
+    <% unless current_page?(root_path) %>
+      <div class='home-logo-box'>
+        <%= link_to image_tag('LendR_logo_white.png', width: 80), root_path, :alt => "Home Page" %>
+      </div>
+    <% end %>
 
     <nav>
       <% if user_signed_in? %>
@@ -24,14 +25,39 @@
         <%= link_to('Dashboard', dashboard_path) %>
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
       <% else %>
-        <%= link_to('Welcome', root_path) %>
         <%= link_to('Browse', categories_path) %>
         <%= link_to('View All', items_path) %>
+        <%= link_to('Login', new_user_session_path) %>
+        <%= link_to('Sign Up', new_user_registration_path) %>
       <% end %>
     </nav>
 
     <%= yield %>
 
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
+<script>
+
+$(document).on('turbolinks:load', function() {
+    $('.image-slider').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1, 
+    speed: 300,
+    adaptiveHeight: true,
+    centerMode: true,
+  });
+});
+
+</script>
+
 
   </body>
 </html>
+
+

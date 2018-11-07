@@ -14,12 +14,27 @@
  *= require_self
  */
 
+ /* --- CSS Global Styling across all pages 
+ */
+
+/* * {
+    margin:0;
+    padding:0;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900|Muli:200,300,400,600,700,800,900');
+
 body {
     text-align: center;
+    background-color: #1E1C1C;
+    color: #fff;
+    /* margin:0;
+    padding:0; */
 }
 
 .home-logo-box {
     float: left;
+    padding-left: 5%;
 }
 
 .nav {
@@ -27,6 +42,40 @@ body {
     justify-content: flex-end;
     width: 80;
 }
+
+ /* --- Grid Setups 
+ */
+
+
+
+ /* --- CSS Styling for Pages#Welcome page 
+ */
+body.pages.welcome {
+    background-image: url('brunel-johnson-1073779-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color:  #1E1C1C;
+}
+
+body.pages.welcome .home-logo {
+    align-items: center;
+}
+
+ /* --- CSS Styling for Pages#Welcome page 
+ */
+ body.users.sign_in {
+    background-image: url('brunel-johnson-1073779-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color:  #1E1C1C;
+}
+
+
+ /* --- CSS Styling for Item#Show page 
+ */
+
 
 .image-slider .slick-slide {
     text-align: center;
@@ -44,6 +93,6 @@ body {
     display: inline-block;
 }
 
-.image-slider .slick-prev:before, .image-slider .slick-next:before {
+/* .image-slider .slick-prev:before, .image-slider .slick-next:before {
     color: #000;
-}
+} */

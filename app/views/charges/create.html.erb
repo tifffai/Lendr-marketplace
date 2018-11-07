@@ -9,6 +9,4 @@
      You rented <%= @item.name %>. A confirmation email will be sent to you shortly.  
 </p>
 
-<% @item.images.each do |image| %>
-  <%= image_tag(image, width: '300') %>
-<% end %>
+<%= image_tag @item.images.first, width: '300' %>
