@@ -6,9 +6,6 @@ Lendr is a community-driven two-sided marketplace that lets you rent out your be
 
 Help others, help yourself. Win-win.
 
-### Lendr Features:
-* _Lend out and Borrow Items_: 
-
 [![Lendr](/app/assets/readme/intro-lendr.png)](https://tranquil-reaches-18328.herokuapp.com) 
 
 ## Contributors
@@ -191,6 +188,10 @@ Return the item to the lender per the agreed terms and timeframe, and leave them
 
 ### <a id="Task-Management"></a>Task Management
 17. Describe the way tasks are allocated and tracked in your project.
+
+![Trello Project](/app/assets/readme/trello-lendr.png)
+![Trello User Stories](/app/assets/readme/trello-user-stories.png)
+
     * Trello: source of truth.
     * Pinterest: inspiration and design references for UX/UI, branding.
     * Google Docs: for shared documents and note-taking.
@@ -199,7 +200,7 @@ Return the item to the lender per the agreed terms and timeframe, and leave them
     * Slack: daily communication.
 
 ### <a id="Agile-Methodologies"></a>Agile Methodologies
-18.  Discuss how Agile methodology is being implemented in your project.
+1.   Discuss how Agile methodology is being implemented in your project.
     * Discuss how Agile methodology is being implemented in your project.
     * Documents comprehensive plan for agile methodology, with extensive evidence of use
     * https://guide.freecodecamp.org/agile
