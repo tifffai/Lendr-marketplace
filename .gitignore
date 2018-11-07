@@ -28,3 +28,6 @@
 
 # Lendr: Ignore .env file
 /.env
+
+# .DS Files
+.DS_Store
