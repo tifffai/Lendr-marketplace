@@ -51,7 +51,7 @@ body {
  /* --- CSS Styling for Pages#Welcome page 
  */
 body.pages.welcome {
-    background-image: url('brunel-johnson-1073779-unsplash.jpg');
+    background-image: image-url('brunel-johnson-1073779-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -65,7 +65,7 @@ body.pages.welcome .home-logo {
  /* --- CSS Styling for Pages#Welcome page 
  */
  body.users.sign_in {
-    background-image: url('brunel-johnson-1073779-unsplash.jpg');
+    background-image: image-url('brunel-johnson-1073779-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
