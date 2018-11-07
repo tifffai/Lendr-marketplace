@@ -6,6 +6,16 @@ Lendr is a community-driven two-sided marketplace that lets you rent out your be
 
 Help others, help yourself. Win-win.
 
+### Lendr Features:
+* _Lend out and Borrow Items_:
+* _Reviews_: Users acting as owners or borrowers in a transaction can mutually provide reviews to keep the Lendr community aware of good actors, and to encourage users to be good actors.
+* _Search_: Item search by keywords to ease the difficulty of browsing and finding items.
+* _Filter_: General search by category so users can search by category for a specific event or use case scenario.
+* _Stripe Payments and Transactions_: Facilitates credit card payments and records transaction details in database for reviews and future reference.
+* _User Dashboard_: User dashboard for account management and transactions.
+* _Devise Authentication_: Allows users to create an account to facilitate owner and borrower transactions.
+* _Pundit Authorisation_: Ensures user profiles, products and comments are secure and only modified by their creators.
+
 [![Lendr](/app/assets/readme/intro-lendr.png)](https://tranquil-reaches-18328.herokuapp.com) 
 
 ## Contributors
