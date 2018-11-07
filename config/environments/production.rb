@@ -94,4 +94,17 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   Rails.application.routes.default_url_options[:host] = 'https://tranquil-reaches-18328.herokuapp.com/'
+
+    # Lendr: Mailer configuration for Mailgun
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address:              ENV['MAILER_ADDRESS'],
+      port:                 587,
+      domain:               ENV['MAILER_DOMAIN'],
+      user_name:            ENV['MAILER_USER_NAME'],
+      password:             ENV['MAILER_PASSWORD'],
+      authentication:       'plain',
+      enable_starttls_auto: true }
+
+
 end
