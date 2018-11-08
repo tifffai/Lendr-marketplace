@@ -86,21 +86,6 @@ Instead of wasting space or money for storage or discarding unused or cumbersome
 
 By empowering users to act as owners and borrowers on Lendr, we allow people to work together to make each others lives (and the world) a more efficient place by making it quick and easy for them to share their belongings.
 
-Why?
-
-_Side Hustle, yo!_ We all have stuff that can be converted to cold, hard cash. By renting our your belongings through Lendr, you make your stuff work for you, and save yourself the time, space and dollars required to make room for things you don't need or use regularly.
-
-_Encourage a more circular and sharing economy_.
-Instead of the usual vicious make, use, dispose cycle, keep your specialised and niche items in use for as long as possible. Extract the maximum value from your belongings by keeping them available but out of sight until you need it again.
-
-_Reduce environmental impact and encourage sustainability_.
-Put the brakes on excessive landfill, unnecessary mass-manufacturing and labour-intensive systems by sharing instead of buying or discarding.
-
-_Promote experiences, not things_. 
-Call it minimalist, zero-waste or common sense living - let go of all the unnecessary clutter and be forced to consider what you really need to own instead of really need to use. With borrowing and sharing now a legitimate and normalised alternative to buying, you can aim for quality over quality, or try before you decide to buy.
-
-_Community_. Make useful connections with people close by and find what you need, quickly, locally and efficiently. Instead of helping the big end of town, find someone you like and trust to give your hard earned dollars over to.
-
 ### <a id="Solution"></a>Solution
 _Describe the project will you be conducting and how your App will address the needs._
 
@@ -124,29 +109,48 @@ Arrange collection from the owner - use, enjoy.
 1. _Return._
 Return the item to the lender per the agreed terms and timeframe, and leave them a review.
 
+Why?
+* _Side Hustle, yo!_ We all have stuff that can be converted to cold, hard cash. By renting our your belongings through Lendr, you make your stuff work for you, and save yourself the time, space and dollars required to make room for things you don't need or use regularly.
+  
+* _Encourage a more circular and sharing economy_.
+Instead of the usual vicious make, use, dispose cycle, keep your specialised and niche items in use for as long as possible. Extract the maximum value from your belongings by keeping them available but out of sight until you need it again.
+
+* _Reduce environmental impact and encourage sustainability_.
+Put the brakes on excessive landfill, unnecessary mass-manufacturing and labour-intensive systems by sharing instead of buying or discarding.
+
+* _Promote experiences, not things_. 
+Call it minimalist, zero-waste or common sense living - let go of all the unnecessary clutter and be forced to consider what you really need to own instead of really need to use. With borrowing and sharing now a legitimate and normalised alternative to buying, you can aim for quality over quality, or try before you decide to buy.
+
+* _Community_. Make useful connections with people close by and find what you need, quickly, locally and efficiently. Instead of helping the big end of town, find someone you like and trust to give your hard earned dollars over to.
+
 ## <a id="Application"></a>Application
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
 **Describe the network infrastructure the App may be based on.**
+The current network infrastructure for Lendr was chosen based on what was most suitable for our MVP iteration. Future scalability (i.e. the servers used to manage requests and traffic and the potential for our application to grow and manage user requests per minute) was considered as an intellectual exercise but not required in actuality for our finished product.
 
-* Research into how we understand the hosting infrastructure
-* Heroku - host on one machine.
-* AWS - hosting our images.
-* Scalability (servers to manage requests), redundancies (if something fails)
+If the architecture of our server system did need to be scaled due to a dramatic increase in the number of requests coming through, there would be a few options:
+
+* _Vertical Scaling_: by giving our server computer more computing power (such as adding more RAM or upgrading the server's processor), however this would only render a positive effect in the initial stage - if our traffic increased again, we would eventually arrive at a point when making further computing upgrades vertically would be technically impossible.
+
+* _Horizontal Scaling_: by converting the single server architecture of our application into multiple-tiers, where the server and load balancer (Ngix), Rails app instances and database instances are located on different servers, allowung us to allocate equal and smaller loads amongst machines.
 
 ### <a id="Software"></a>Software
 **Identify and describe the software to be used in your App.**
+The software used in our application included the following tech stacks and frameworks:
 
-Describe the tech stack used for the application
-* Ruby on Rails - framework.
-* Ruby - programming language.
-* CSS (SASS) - styling.
-* HTML - semantic.
+* _Ruby_: a dynamic, object-orientated general purpose programming language.
+* _Ruby on Rails_: a web application framework that provides default structures for a database, a web service, and web pages.
+* _HTML_: the standard semantic markup language for all web pages and web applicatons.
+* _CSS_: the style sheet language used to specify the presentation of web pages and web applications written in markup languages like HTML such as layouts, colours and fonts.
 
 ### <a id="Architecture"></a>Architecture
 **Describe the architecture of your App.**
+The architecture of our Ruby on Rails application adheres to the model-view-controller pattern for developing user interfaces by separating out the application logic into three parts:
+* _Model_: defines data structures and what data the application should store.
+* _View_: defines the display (user interface).
+* _Controller_: contains the control logic that updates the model and/or view in response to input from users.
 
-* Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
-* Yes go into detail about MVC, don’t describe any model associations yet
+The MVC architecture allows for efficiencies by promoting modularity and avoiding repetitive code.
 
 ### <a id="Components"></a>Components
 _Explain the different high-level components (abstractions) in your App._
@@ -160,9 +164,9 @@ Instances of different high-level components (abstractions) used in our project 
 
 ### <a id="Third-Party-Services"></a>Third Party Services
 **Detail any third party services that your App will use.**
-* APIs?
-* Heroku?
-* AWS?
+Currently, Lendr is hosted through _Heroku_, a platform as a service (PaaS). Using Heroku provided us with a managed solution so that we didn’t have to concern ourselves with infrastructure headaches such as configuring hardware and setting up localised servers, and were able to focus on coding and development. By shipping all computing services through Heroku bundles (dynoms), we did not have to separately launch hard drives and virtual instances - everything required for our Rails application was provided by default. The benefit of using Heroku is that it is optimised for quick and efficient deployment of Rails (suitable for our MVP) however if did want to scale this further, there are more limited options for configuration compared to other hosting services and service charges tend to rise dramatically if traffic to our site increased exponentially. 
+ 
+To collect and storage image uploads from users for item listings on Lendr, we used _S3_ cloud infrastructure provided by Amazon Web Services, the world's largest cloud infrastructure/storage service that has been designed for durability, security and compliance. For our MVP, this allowed us to take advantage of their most affordable hosting services and a very stable and scalable platform to manage redundancies (in the event that something was to fail).
 
 ### <a id="Database"></a>Database
 #### <a id="Database-Justification"></a>Database Justification
@@ -171,6 +175,19 @@ Instances of different high-level components (abstractions) used in our project 
 * Full excellent discussion of database used
 * Pros and Cons of Postgresql over SQLite (more than one thing at a time)
 * How postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
+<!-- 
+For our purposes, we chose to develop our app with PostgreSQL due to its performance, security concerns and ability to deploy with Heroku.
+
+We found PostgreSQL desirable for the following areas of focus:
+
+Free, open-source: PostgreSQL is a free, completely open-source software solution
+
+Performance: PostgreSQL is widely used in large systems where read and write speeds are crucial and data needs to be validated. It also handles systems requiring execution of complex queries. 
+ACID Compliance: Ensures, that during database transactions, no data is lost or miscommunicated across the system in the event of errors or power failure, even if multiple changes are made during a single transaction
+
+Security:  In order to protect sensitive data from illegitimate use, malicious threats and attacks PostgreSQL has the security measures we require. PostgreSQL has roles and inherited roles to set and maintain permissions. PostgreSQL has native SSL support for connections to encrypt client/server communications. It also has Row Level Security.
+
+Community support: PostgreSQL has a very strong and active community that constantly improves existing features while its innovative committers strive to ensure it remains the most advanced database with new cutting-edge features and security. -->
 
 #### <a id="Production-Database"></a>Production Database
 **Identify and describe the production database setup (i.e. postgres instance).**
