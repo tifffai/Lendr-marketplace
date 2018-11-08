@@ -352,31 +352,34 @@ Understanding when, how and what to test proved to be the most challenging part.
 * Acting as a client for the application code, to influence its design and interface with other parts of the system.
 
 ### <a id="Information-Security-Requirements"></a>Information Security Requirements
-**Discuss and analyse requirements related to information system security.**
+_Discuss and analyse requirements related to information system security._
+The digital economy is built on data that is being created, collected, combined and shared on a unprecented scale in which traditional governance frameworks, cybersecurity and risk-mitigation strategies are insufficient. In the digital age, analysing and acting on insights from data can produce entirely new types of risk, including:
+* Unethical or illegal use of personal or corporate data
+* Biases that exascerbate issues of social and economic justice, profiling, etc.
+* Using data for purposes to which its original disclosers would not have agreed to or without their consent.
 
-* Payment Security?
-* Customer Data Protection?
-* Disputes - Reviews/Comments
-* Lost/Damaged Items
-
-Make this a more general analysis of the ethics behind handling user data.
+While in the past, risk management largely related to cybersecurity, today it captures a broad scope of responsibilites both on users and providers as to the risks involved from insufficient or unethical data practices, such as:
+* Managing and encypting sensitive customer data (such as passwords, financial details, health recods, etc).
+* The right to privacy and the use of data for research, marketing and tracking.
+* Data breaches and disclosures to regulators and the public.
+* Accessibility and vulnernability of data hosted on platforms using APIs and other third party applications.
 
 ### <a id="Information-Security-Methodologies"></a>Information Security Methodologies
-**Discuss methods you will use to protect information and data.**
-* Encryption - hashing passwords automatically.
-* Stripe - what manages and protects all credit card information.
-* Pundit - controls authorisations and what users can see.
-* Timeouts - automatically logging users out after a period of inactivity??
+_Discuss methods you will use to protect information and data._
 
-https://www.oaic.gov.au/agencies-and-organisations/guides/guide-to-securing-personal-information
+For our MVP, the following Ruby gems and methods were used to protect information and data:
+* Devise: provides authentication for hashing and storing user data and adding user registration, log-in and log-out features to our application.
+* Pundit: provides a set of helpers for authorisation to manage user permissions and application policies.
+* Stripe: payments are processed through Stripe (which has the highest grade of payment processing security) so that sensitive financial data (i.e. credit card information) is not stored by Lendr.
+* Validations: implementing form validations requiring minimum number of characters to make passwords more secure and cleaner data.
+
 
 ### <a id="User-Data-Management"></a>User Data Management
-**Research what your legal obligations are in relation to handling user data.**
-* Cookies - disclaimers for use of cookies to track user data.
-* Privacy - using customer data for data analytics, marketing purposes.
-https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/businesses/
-* Terms of use
-* Posting policy 
+_Research what your legal obligations are in relation to handling user data._
+As legal obligations in relation to handling user data vary across different countries and regions, it is vital to check the laws and requirements for compliance. Legal obligations to consider in Australia include:
+* _Cookie Policy_: website requirements to get consent from visitors to store or retrieve any information on a computer, smartphone or tablet for tracking purposes.
+* _Privacy Policy_: disclosing the ways in which the a website gathers, uses, discloses and managers a visitor or customer's data and legal requirements to protect a user's privacy.
+* _Legal Notice and Terms_: Outlining the terms on which users may make use of the website and the legal use of copyrighted or proprietary assets and information.
 
 ## <a id="Minimum-Viable-Product"></a>Minimum Viable Product
 ### <a id="Challenges"></a>Challenges
@@ -389,6 +392,7 @@ Throughout the project, we encountered some challenges and setbacks which requir
 * _Mailgun_: resolving odd errors with fetch.
 * _Heroku_: resolving Heroku errors involved debugging following a errors checklist and using Heroku's maddeningly inspecific logs to resolve, also needed to edit, drop, reset and seed a number of tables.
 * _Carousel & Multiple Images_: trying to get a carousel and multiple image upload that was compatible proved to be time-consuming, requiring some trial and error with Bootstrap and JavaScript to make work.
+* _Timeouts_: implement automatic timeouts for transactions and logged in accounts so that abandoned pages do not show potentially sensitive data longer than a standard web session (30 minutes).
 
 ### <a id="Future-Enhancements"></a>Future Enhancements
 Given the opportunity to implement additional functionality, future enhancements would include:
@@ -401,12 +405,15 @@ Given the opportunity to implement additional functionality, future enhancements
 * _Admin Dashboard_: create admin dashboard to visualise and manage user access and data storeed in Active Record models, with full CRUD options.
 
 ### <a id="Ethical-Considerations"></a>Ethical Considerations
-* Prohibited Items: single use items, living creatures, etc., medical/hazardous, stuff that requires a licence to run, underage/overage, personal services (e.g escort)
-* Malicious Use
-* Insurance/Fraud
+In a real-world use case scenario, the following situations would involve some ethical considerations:
+* _Prohibited Items_: applying specific rule and conditions with respect to allowed and prohibited items for rent such as single use items, living creatures, medical and/or hazardous materials, dangerous goods, weapons, illicit items, adult material, offensive material, stolen property, proprietary items, etc.
+* _Contact Information and Location_: how and where contact information and sensitive user information (such as address/location) is displayed to users.
+* _Malicious Use_: managing situations where innocuous items are used by borrowers maliciously to harass, intimidate or offend.
+* _Dispute Resolution_: devising a fair and robust dispute resolution process for lost, damage or disputed items.
+* _Insurance/Fraud_: how to protect owners and lenders from fraud and/or provide some kind of bond, guanatee or insurance where recompense is required.
 
 ### <a id="The-Pitch"></a>The Pitch
 * Attach PowerPoint Presentation
   
 ## <a id="Conclusion"></a>Conclusion
-Final evaluation of the finished product.
+Overall...
