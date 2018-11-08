@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.item-form {
-    width: 800px;
+.item-form, .comment-form, .signup-form, .edit-signup-form, .login-form, .resend-confirm-form, .change-password-form, .edit-change-password-form, .unluck-instruction-form {
+    width: 60vw;
     margin: 0 auto;
 }
 

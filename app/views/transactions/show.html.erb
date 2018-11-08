@@ -1,5 +1,4 @@
-<h1>Transactions#show</h1>
-<p>Find me in app/views/transactions/show.html.erb</p>
+<h1>Transaction</h1>
 
 <p>
   <strong>Item ID:</strong>
@@ -40,8 +39,13 @@
   <%= @transaction.borrower_id %>
 </p>
 
+<br><br>
+<hr>
+<br><br>
 
 <h2>Add Comment</h2>
+
+<div class='comment-form'>
 
 <%= form_for Comment.new, url: comments_path do |f| %>
   <div class="field">
@@ -70,6 +74,7 @@
  </p> 
  
   <%= f.hidden_field(:item_id, value: @transaction.item.id) %>
-  <p><%= f.button :submit, type: :submit %></p>
+  <p><%= f.button :SUBMIT, type: :submit %></p>
 
 <% end %>
+</div>

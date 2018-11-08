@@ -15,30 +15,7 @@
 
   <body class="<%= controller_name %> <%= action_name %>">
   <%# Lendr: Add Navigation links to appear on every view %>
-    <% unless current_page?(root_path) %>
-      <div class='navbar-logo-box'>
-        <%= link_to image_tag('LendR_logo_white.png', width: 80), root_path, :alt => "Home Page" %>
-      </div>
-    <% end %>
-
-    <div class='navbar-box'>
-      <nav>
-        <% if user_signed_in? %>
-          <ul>        
-            <li><%= link_to('Browse', categories_path) %> </li>
-            <li><%= link_to('View All', items_path) %> </li>
-            <li><%= link_to('Post New', new_item_path) %> </li>
-            <li><%= link_to('Dashboard', dashboard_path) %> </li>
-            <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
-          <% else %>
-            <li><%= link_to('Browse', categories_path) %> </li>
-            <li><%= link_to('View All', items_path) %> </li>
-            <li><%= link_to('Login', new_user_session_path) %> </li>
-            <li><%= link_to('Sign Up', new_user_registration_path) %> </li>
-          <% end %>
-          </ul>
-      </nav>
-    </div>
+    <%= render 'partials/header' %>
 
     <%= yield %>
 

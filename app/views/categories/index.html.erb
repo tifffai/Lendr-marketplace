@@ -12,9 +12,9 @@
 
     <div class="browse-category-grid">
         <% @categories.each do |category| %>
-            <div class="style-<%= "#{category.name.downcase}" %>">
+            <div class="style-<%= category.name.downcase %>">
                 <%= link_to (image_tag "#{category.name.downcase}.svg", size: "30"), category, :alt => "#{category.name}"%>
-                <p class="category-title"><%= link_to category.name.upcase, category %></p>
+                <p class="category-title"><small><%= link_to category.name.upcase, category %></small></p>
             </div>
         <% end %>
     </div>
