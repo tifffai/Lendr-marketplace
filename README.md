@@ -125,7 +125,7 @@ Call it minimalist, zero-waste or common sense living - let go of all the unnece
 
 ## <a id="Application"></a>Application
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
-**Describe the network infrastructure the App may be based on.**
+_Describe the network infrastructure the App may be based on._
 The current network infrastructure for Lendr was chosen based on what was most suitable for our MVP iteration. Future scalability (i.e. the servers used to manage requests and traffic and the potential for our application to grow and manage user requests per minute) was considered as an intellectual exercise but not required in actuality for our finished product.
 
 If the architecture of our server system did need to be scaled due to a dramatic increase in the number of requests coming through, there would be a few options:
@@ -135,7 +135,7 @@ If the architecture of our server system did need to be scaled due to a dramatic
 * _Horizontal Scaling_: by converting the single server architecture of our application into multiple-tiers, where the server and load balancer (Ngix), Rails app instances and database instances are located on different servers, allowung us to allocate equal and smaller loads amongst machines.
 
 ### <a id="Software"></a>Software
-**Identify and describe the software to be used in your App.**
+_Identify and describe the software to be used in your App._
 The software used in our application included the following tech stacks and frameworks:
 
 * _Ruby_: a dynamic, object-orientated general purpose programming language.
@@ -144,7 +144,8 @@ The software used in our application included the following tech stacks and fram
 * _CSS_: the style sheet language used to specify the presentation of web pages and web applications written in markup languages like HTML such as layouts, colours and fonts.
 
 ### <a id="Architecture"></a>Architecture
-**Describe the architecture of your App.**
+_Describe the architecture of your App._
+
 The architecture of our Ruby on Rails application adheres to the model-view-controller pattern for developing user interfaces by separating out the application logic into three parts:
 * _Model_: defines data structures and what data the application should store.
 * _View_: defines the display (user interface).
@@ -154,6 +155,7 @@ The MVC architecture allows for efficiencies by promoting modularity and avoidin
 
 ### <a id="Components"></a>Components
 _Explain the different high-level components (abstractions) in your App._
+
 The abstraction principles applied to object-oriented programming languages and frameworks like Ruby and Rails aim to minimise duplication of information within a program by making common functionalities modular through abstractions or software libraries.
 
 Doing so means that code is more efficient and DRY (generalised as the 'Don't Repeat Yourself' principle), developers can work more efficiently (by not having to code common functions from scratch or repetitively), thereby reducing redundancies overall. With Rails, there are a numerous abstractions where functions 'automagically' happen, ultimately creating efficiencies in the long run but a steeper learning curve for beginners (to put it mildly).
@@ -163,52 +165,102 @@ Instances of different high-level components (abstractions) used in our project 
 * As the model component in the Model-View-Controller architecture of Rails, the ActiveRecord module is a form of database extraction, building into the Rails framework a database adapter to connect to SQLite, MySQL and PostgreSQL, so that it isn't dependent upon any one database, and can be invoked as needed. 
 
 ### <a id="Third-Party-Services"></a>Third Party Services
-**Detail any third party services that your App will use.**
+_Detail any third party services that your App will use._
+
 Currently, Lendr is hosted through _Heroku_, a platform as a service (PaaS). Using Heroku provided us with a managed solution so that we didn’t have to concern ourselves with infrastructure headaches such as configuring hardware and setting up localised servers, and were able to focus on coding and development. By shipping all computing services through Heroku bundles (dynoms), we did not have to separately launch hard drives and virtual instances - everything required for our Rails application was provided by default. The benefit of using Heroku is that it is optimised for quick and efficient deployment of Rails (suitable for our MVP) however if did want to scale this further, there are more limited options for configuration compared to other hosting services and service charges tend to rise dramatically if traffic to our site increased exponentially. 
  
 To collect and storage image uploads from users for item listings on Lendr, we used _S3_ cloud infrastructure provided by Amazon Web Services, the world's largest cloud infrastructure/storage service that has been designed for durability, security and compliance. For our MVP, this allowed us to take advantage of their most affordable hosting services and a very stable and scalable platform to manage redundancies (in the event that something was to fail).
 
 ### <a id="Database"></a>Database
 #### <a id="Database-Justification"></a>Database Justification
-**Identify the database to be used in your App and provide a justification for your choice.**
-* Why we use Postgres instead of SQLite (because SQLite can only do one thing at a time)
-* Full excellent discussion of database used
-* Pros and Cons of Postgresql over SQLite (more than one thing at a time)
-* How postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
-<!-- 
-For our purposes, we chose to develop our app with PostgreSQL due to its performance, security concerns and ability to deploy with Heroku.
+_Identify the database to be used in your App and provide a justification for your choice._
 
-We found PostgreSQL desirable for the following areas of focus:
+For our purposes, we chose to develop Lendr with PostgreSQL due to its performance, security and ability to deploy with Heroku. As the most advanced, open-source object-relational database management system compared to SQLite and MySQL, PostgreSQL is the most extensible and standards-compliant, capable of handling many tasks very efficiently.
 
-Free, open-source: PostgreSQL is a free, completely open-source software solution
-
-Performance: PostgreSQL is widely used in large systems where read and write speeds are crucial and data needs to be validated. It also handles systems requiring execution of complex queries. 
-ACID Compliance: Ensures, that during database transactions, no data is lost or miscommunicated across the system in the event of errors or power failure, even if multiple changes are made during a single transaction
-
-Security:  In order to protect sensitive data from illegitimate use, malicious threats and attacks PostgreSQL has the security measures we require. PostgreSQL has roles and inherited roles to set and maintain permissions. PostgreSQL has native SSL support for connections to encrypt client/server communications. It also has Row Level Security.
-
-Community support: PostgreSQL has a very strong and active community that constantly improves existing features while its innovative committers strive to ensure it remains the most advanced database with new cutting-edge features and security. -->
+The main benefits of using PostgreSQL are:
+* _Open-source_: PostgreSQL is a completely free and open-source software solution.
+* _Performance_: widely used in large systems where read and write speeds are crucial and data needs to be validated. It also handles systems requiring execution of complex queries. 
+* _Compliance_: Ensures that during database transactions, no data is lost or miscommunicated in the event of errors or power failure, even if multiple changes in a single transaction.
+* _Security_: In order to protect sensitive data from illegitimate use, malicious threats and attacks PostgreSQL has the security measures to set and maintain permissions and SSL support to encrpt communications.
+* _Community Support_: PostgreSQL has a very strong and active community that constantly improves existing features.
 
 #### <a id="Production-Database"></a>Production Database
-**Identify and describe the production database setup (i.e. postgres instance).**
-* Database being setup on Heroku and Postgres (Postgres provided a development version and a production version)
-* Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
+_Identify and describe the production database setup (i.e. postgres instance)._
+As Rails uses the MVC architectural pattern to populate our application with database data, the database is represented as an abstraction of SQL through the model (which defines data structures and what data the application should store).
+
+As a database agnostic framework capable of being used with a variety of different databases, we opted to use PostgreSQL for our Rails application as it provides both a development version and a production version that can be managed through the ```database.yml``` file. 
+
+Having different databases for development (hosted locally on our computers) and production (hosted on Heroku) allowed us to separate and test data for performance, efficiency and other issues - namely, in production, whether the application can handle its own data and can be populated through our application.
 
 #### <a id="Market-Research"></a>Market Research
-**Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).**
-* Market research: Things version of Airbnb, similar rental model (difference: for objects not accommodation)
-* Ziilch (difference: users are giving away items for free)
-* Gumtree, eBay (difference: users are buying/seller goods for ownership not rental)
-* Fashion Rentals/Rent Furniture, etc. (difference: companies own inventory)
+_Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb)._
+
+Similar two-sided marketplaces and sharing economy platforms are currently in operation, and would share some similar data structures such as models (SQL tables) for users (in which users can act as both buyers and sellers in an exchange), categories and comments (reviews/ratings), with some key differences:
+* _Airbnb_: instead of a model for items, models for homes, experiences and restaurants.
+* _eBay_: models setup in eBay's database would facilitate the sale of goods rather than the lending of goods.
+* _Gumtree_: no model to record transactions between sellers and buyers as no payments between users are facilitated on the platform, only with Gumtree itself (for promoted listings) as Gumtree's revenue is primarily derived from ads.
+* _Ziilch_: no model to record transactions between users as the platform facilitates interactions where users giveaway or receive items for free.
+* _Rentals_: specialised rental platforms such as Your Closet and Glam Corner would have a users table with only a buyer role (no seller) as the company owns the inventory rather than facilitating a peer-to-peer economy.
 
 #### <a id="Database-Relations"></a>Database Relations
 **Discuss the database relations to be implemented.**
-* ERD - describe model associations and why.
-* This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
 
-**Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other.**
-* Associations - e.g. has many, has one, etc???
-* Think about rails active record associations, has_many, has_one, belongs_to
+In SQL, database relations describe the way in which tables (represented in Rails as models) are connected. By defining these relationships, we can leverage powerful cross-table queries, either by specifying foreign key pairings (by pairing a unique ID reference from each table to create the relationship) and/or using join tables (tables which combine columns from two separate tables), depending on the type of database relationship.
+
+There are three main types of database relationships, named according to the number of table rows that may be involved in the relationships:
+
+* _One-to-one relationships_: using a foreign key matched to the primary keyy, occurs when each entry in a table has one, and only one, counterpart in the second table.
+* _One-to-many-relationships_: using a foreign key matched to the primary key, occurs when each record in the first table corresponds to one or more records in another table, but each record in the second table only corresponds to one record in the first.
+* _Many-to-many relationships_: using a join table, occurs when each record in the first table corresponds to one or more records in the second and vice versa.
+
+In Rails, these relationships are defined as associations between two Active Record models. By creating these associations, common operations are simpler and easier to code. Rails supports six types of associations:
+
+Rails supports six types of associations:
+```
+belongs_to
+has_one
+has_many
+has_many :through
+has_one :through
+has_and_belongs_to_many
+```
+
+_Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other._
+The associations between our Active Record models in Lendr are summarised below:
+
+**User**
+```
+has_many :items
+has_many :transactions
+has_many :comments
+```
+**Item**
+```
+belongs_to :user
+belongs_to :category
+has_many :transactions
+has_many :comments 
+has_many_attached :images
+```
+
+**Transaction**
+```
+belongs_to :item
+belongs_to :borrower, class_name: "User"
+belongs_to :owner, class_name: "User"
+has_many :comments
+```
+
+**Comment**
+```
+belongs_to :item
+belongs_to :user
+```
+
+**Category**
+```
+has_many :items
+```
 
 #### <a id="Entity-Relationship-Diagram"></a>Entity Relationship Diagram
 _Provide your database schema design._
