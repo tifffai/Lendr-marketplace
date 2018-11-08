@@ -391,11 +391,14 @@ Throughout the project, we encountered some challenges and setbacks which requir
 * _Carousel & Multiple Images_: trying to get a carousel and multiple image upload that was compatible proved to be time-consuming, requiring some trial and error with Bootstrap and JavaScript to make work.
 
 ### <a id="Future-Enhancements"></a>Future Enhancements
-Wh
-* Make the code DRY
-* Geocoder: Maps
-* Scheduler: Book in Advance
-* Internal Messenging Function
+Given the opportunity to implement additional functionality, future enhancements would include:
+* _Geocoder_: implementing Geocode gem to extract latitude and longitude coordinated for users to display owners and borrowers nearby for a given item, currently users must hardcode in an address and contact each other directly to organise a pickup time and location per the terms specified in the listing. From there, these coordinates could be used to represent this visually in a map similar to Airbnb.
+* _Scheduler_: implementing ActsAsBookable gem to allow users to book resources by implementing a scheduling function, currently platform only allows for immediate reservations.
+* _Internal Messaging_: implement internal messaging to allow users to communicate to each other privately through Lendr, currently users must contact each other directly via email or mobile outside of the platform.
+* _Shopping Cart_: add shopping cart function that allows users to rent and pay for multiple items in a single transaction.
+* _Bond/Guarantee_: implement function that allows owners to specify a bond or guarantee that is charged to the borrower in the event of lost or damaged items.
+* _Watchlist/Favourites_: add watchlist and favourites list functionality that allows registered users to keep track of favourite or interested items.
+* _Admin Dashboard_: create admin dashboard to visualise and manage user access and data storeed in Active Record models, with full CRUD options.
 
 ### <a id="Ethical-Considerations"></a>Ethical Considerations
 * Prohibited Items: single use items, living creatures, etc., medical/hazardous, stuff that requires a licence to run, underage/overage, personal services (e.g escort)
