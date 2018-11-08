@@ -46,7 +46,6 @@ https://github.com/thlorenz/doctoc
     - **[Wireframes](#Wireframes)**
     - **[Task Management](#Task-Management)**
     - **[Agile Methodologies](#Agile-Methodologies)**
-    - **[Coding](#Coding)** 
     - **[Source Control](#Source-Control)**
     - **[Deployment](#Deployment)**  
 - **[Testing and Information Security](#Testing-and-Information-Security)**
@@ -126,68 +125,66 @@ Return the item to the lender per the agreed terms and timeframe, and leave them
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
 _Describe the network infrastructure the App may be based on._
 
-    * Research into how we understand the hosting infrastructure
-    * Heroku - host on one machine.
-    * AWS - hosting our images.
-    * Scalability (servers to manage requests), redundancies (if something fails)
+* Research into how we understand the hosting infrastructure
+* Heroku - host on one machine.
+* AWS - hosting our images.
+* Scalability (servers to manage requests), redundancies (if something fails)
 
 ### <a id="Software"></a>Software
 _Identify and describe the software to be used in your App._
-
-    Describe the tech stack used for the application
-    * Ruby on Rails - framework.
-    * Ruby - programming language.
-    * CSS (SASS) - styling.
-    * HTML - semantic.
+Describe the tech stack used for the application
+* Ruby on Rails - framework.
+* Ruby - programming language.
+* CSS (SASS) - styling.
+* HTML - semantic.
 
 ### <a id="Architecture"></a>Architecture
 _Describe the architecture of your App._
 
-    * Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
-    * Yes go into detail about MVC, don’t describe any model associations yet
+* Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
+* Yes go into detail about MVC, don’t describe any model associations yet
 
 ### <a id="Components"></a>Components
 **Explain the different high-level components (abstractions) in your App.**
-
-    * High level components examples?
-    * Using Gems instead of rebuilding the code.
-    * Active Record is an abstraction of SQL
-    * You could talk how ruby gems are an abstraction from your own ruby code. You could also talk about how active record is an abstraction of sql.
+* High level components examples?
+* Using Gems instead of rebuilding the code.
+* Active Record is an abstraction of SQL
+* You could talk how ruby gems are an abstraction from your own ruby code. You could also talk about how active record is an abstraction of sql.
 
 ### <a id="Third-Party-Services"></a>Third Party Services
 _Detail any third party services that your App will use._
-    * APIs?
-    * Heroku?
-    * AWS?
+* APIs?
+* Heroku?
+* AWS?
 
 ### <a id="Database"></a>Database
 #### <a id="Database-Justification"></a>Database Justification
 _Identify the database to be used in your App and provide a justification for your choice._
-    * Why we use Postgres instead of SQLite (because SQLite can only do one thing at a time)
-    * Full excellent discussion of database used
-    * Pros and Cons of Postgresql over SQLite (more than one thing at a time)
-    * How postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
+* Why we use Postgres instead of SQLite (because SQLite can only do one thing at a time)
+* Full excellent discussion of database used
+* Pros and Cons of Postgresql over SQLite (more than one thing at a time)
+* How postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
 
 #### <a id="Production-Database"></a>Production Database
 _Identify and describe the production database setup (i.e. postgres instance)._
-    * Database being setup on Heroku and Postgres (Postgres provided a development version and a production version)
-    * Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
+* Database being setup on Heroku and Postgres (Postgres provided a development version and a production version)
+* Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
 
 #### <a id="Market-Research"></a>Market Research
 _Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb)._
-    * Market research: Things version of Airbnb, similar rental model (difference: for objects not accommodation)
-    * Ziilch (difference: users are giving away items for free)
-    * Gumtree, eBay (difference: users are buying/seller goods for ownership not rental)
-    * Fashion Rentals/Rent Furniture, etc. (difference: companies own inventory)
+* Market research: Things version of Airbnb, similar rental model (difference: for objects not accommodation)
+* Ziilch (difference: users are giving away items for free)
+* Gumtree, eBay (difference: users are buying/seller goods for ownership not rental)
+* Fashion Rentals/Rent Furniture, etc. (difference: companies own inventory)
 
 #### <a id="Database-Relations"></a>Database Relations
 _Discuss the database relations to be implemented._
-    * ERD - describe model associations and why.
-    * This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
+* ERD - describe model associations and why.
+* This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
 
 _Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other._
-    * Associations - e.g. has many, has one, etc???
-    * Think about rails active record associations, has_many, has_one, belongs_to
+* Associations - e.g. has many, has one, etc???
+* Think about rails active record associations, has_many, has_one, belongs_to
 
 #### <a id="Entity-Relationship-Diagram"></a>Entity Relationship Diagram
 _Provide your database schema design._
@@ -213,46 +210,47 @@ User stories were written from the perspective of the Lendr end user to guide th
 
 ### <a id="Wireframes"></a>Wireframes
 **Provide Wireframes for your App.**
+After brainstorming the main concept for platform features, basic low-fi wireframes were created using Balsamiq to play around with UX/UI elements, allowing us to easily tweak and visualise our ideas:
 
+![Balsamiq Wireframes](/app/assets/readme/lendr-wireframes-balsamiq.png)
 
-https://www.figma.com/file/GgOm1rE5oiUrEOCeMAOWv11p/Lendr?node-id=0%3A1
+From there, we used Figma to create detailed wireframes, test colours and typography and prototype logos ad branding to finalise our overall design and have a clear idea of what we were working to from a design perspective.
+
+![Figma Wireframes](/app/assets/readme/lendr-wireframes-figma.png)
 
 ### <a id="Task-Management"></a>Task Management
-**Describe the way tasks are allocated and tracked in your project.**
+_Describe the way tasks are allocated and tracked in your project._
 
-![Trello](/app/assets/readme/lendr-trello-project-management.png)
+Given the sheer numerosity of tasks involved and the two-week timeframe for delivery, tasks were allocated and tracked through Trello as the main source of truth.
 
-* Trello: source of truth.
-* Pinterest: inspiration and design references for UX/UI, branding.
-* Google Docs: for shared documents and note-taking.
-* Balsamiq: basic wireframes.
-* Figma: detailed wireframes.
-* Slack: daily communication.
+Having all the major tasks required to hit MVP in a centralised place made it easy to track daily tasks, timelines, challenges and break out functionalities between essential features and future enhancements to make delivery and documentation more efficient.
+
+![Trello Project Management](/app/assets/readme/lendr-trello-project-management.png)
+
+Additionally, the following platforms were used throughout the project to assist with tasks allocated through Trello:
+
+* _Pinterest_: inspiration and design references for UX/UI, branding etc.
+* _Google Docs_: for shared documents and note-taking.
+* _Balsamiq_: to create basic low-fi wireframes.
+* _Figma_: to visualise elements for logo, colour scheme, typography, etc. and create detailed wireframes.
+* _Slack_: private channel created for daily communication.
 
 ### <a id="Agile-Methodologies"></a>Agile Methodologies
 **Discuss how Agile methodology is being implemented in your project.**
-* Discuss how Agile methodology is being implemented in your project.
-* Documents comprehensive plan for agile methodology, with extensive evidence of use
-* https://guide.freecodecamp.org/agile
-* Scrum Master - Linda
-* Daily Scrum (Standups)
-* User Stories - to describe one or more features from the perspective of the end user 
-(Mini-Sprints - by hours/days)
-    * Continuous Deployment/Delivery - deploying every day, commits 
+With a firm eye towards MVP throughout the project, we endeavoured to follow an Agile approach through adaptive planning, iterative development, quick delivery and continual improvement, which enabled us to respond more rapidly and flexibly to change. True enough, throughout the process we were forced to and able to scale our project up and down when faced with setbacks or opportunities to improve what had aleady been set up.
 
-### <a id="Coding"></a>Coding
-Brief description of the coding process:
-    * Using Rails
-    * Using HTML & CSS
-    * Desktop and Mobile First
+The following methodologies were used:
+* _Scrum_: After encountering setbacks, Scrum methodologies like daily standups and retrospetives were used to discuss daily prioirities and reflect on the past to tighten up what we could deliver within the two-week timeframe.
+* _User Stories_: creating user stories to conceptualise features and requirements from the perspective of Lendr end-users.
+* _Workflows_: tasks were broken down into TO DO, DOING and DONE workflows
+* _Kanban_: tasks broken down into workflows and features were visualised in cards and columns using Trello.
+* _Paired Programming_: working in pairs or as a group of three, throughout the coding process we would work together at one workstation or use VS LiveShare to alternate between navigating and observing, then switching. This allowed us to pick up on errors and have a safety net.
 
-### <a id="Source-Control"></a>Source Control
-1.  Provide an overview and description of your Source control process.
-    * Provide an overview and description of your Source control process.
-    * Meets D criteria and demonstrates frequent commits, merges and pull requests
-    * GitHub - one person to manage pull requests, less risky.
-    * Commit after every working code snippet.
-    * Create new branch for each feature to be worked on.
+### <a id="Source-Control"></a>Coding & Source Control
+_Provide an overview and description of your Source control process._
+GitHub was used to manage version-control of the source code amongst multiple collaborators. We elected to follow industry practice and have only one team member manage pull requests and merge conflicts rather than have all team members able to push updates to the source directly. Given our relative inexperience with using Git, we felt this was less risky and better practice for how this would be used in a professional setting.
+
+Throughout the coding process, we tried to remember to commit early and often, use branches and leave detailed comment, with varying levels of success). Being our first times using GitHub collaboratively, overall we felt the source control process was managed well without any major conflicts or errors, allowing us to grow slightly more comfortable with this type of workflow.
 
 ### <a id="Deployment"></a>Deployment
 1.  Provide an overview and description of your Source control process.
