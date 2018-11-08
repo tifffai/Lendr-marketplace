@@ -405,7 +405,7 @@ In a real-world use case scenario, the following situations would involve some e
 * _Insurance/Fraud_: how to protect owners and lenders from fraud and/or provide some kind of bond, guarantee or insurance where recompense is required.
 
 ### <a id="The-Pitch"></a>The Pitch
-* Attach PowerPoint Presentation
-  
+[Download PowerPoint](/app/assets/readme/Lendr.pdf)
+
 ## <a id="Conclusion"></a>Conclusion
-Overall...
+Overall, we were able to achieve the MVP version and concept of our application we envisioned.
