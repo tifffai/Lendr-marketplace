@@ -2,12 +2,12 @@
 ## Help others, help yourself.
 ### https://tranquil-reaches-18328.herokuapp.com/
 ## About Lendr
-Lendr is a community-driven two-sided marketplace that lets you rent out your belongings to others nearby. Everyday, we connect Australians who need things, with others in your neighbourhood that have it to lend. Our vision is to provide a platform where anyone and anything - from the everyday to special occasion - can be borrowed quickly and easily without needing to break the bank or buy more stuff.
+Lendr is a community-driven two-sided marketplace that lets you rent out your belongings to others nearby. Everyday, we connect people who need things, with others in your neighbourhood that have it to lend. Our vision is to provide a platform where anyone and anything - from the everyday to special occasion - can be borrowed quickly and easily without needing to break the bank or buy more stuff.
 
 Help others, help yourself. Win-win.
 
-### Lendr Features:
-* _Lend out and Borrow Items_:
+### Lendr Features
+* _Lend and Borrow Items_: Users can lend and and borrow belongings from other users nearby, setting their own daily rate, terms and conditions from a listing hosted on Lendr.
 * _Reviews_: Users acting as owners or borrowers in a transaction can mutually provide reviews to keep the Lendr community aware of good actors, and to encourage users to be good actors.
 * _Search_: Item search by keywords to ease the difficulty of browsing and finding items.
 * _Filter_: General search by category so users can search by category for a specific event or use case scenario.
@@ -20,8 +20,8 @@ Help others, help yourself. Win-win.
 
 ## Contributors
 |[![Linda Lai](/app/assets/readme/contributors-linda-lai-70x70.jpg)](https://github.com/linda-lai) | [![Mat Wats](/app/assets/readme/contributors-IvoryThunder83-70x70.jpg)](https://github.com/IvoryThunder83) | [![Tiffany Fai](/app/assets/readme/contributors-tiffai-70x70.jpg)](https://github.com/tifffai) |
-|----------|-----------|-------------|
-|Linda Lai | Mat Watts | Tiffany Fai |
+|-----------|-----------|-------------|
+| Linda Lai | Mat Watts | Tiffany Fai |
 
 ## Contents
 https://github.com/thlorenz/doctoc
@@ -41,6 +41,7 @@ https://github.com/thlorenz/doctoc
     - **[Database Relations](#Database-Relations)**
     - **[Entity Relationship Diagram](#Entity-Relationship-Diagram)** 
 - **[Project Management](#Project-Management)**
+    - **[Inspiration](#Inspiration)**
     - **[User Stories](#User-Stories)**
     - **[Wireframes](#Wireframes)**
     - **[Task Management](#Task-Management)**
@@ -87,7 +88,7 @@ By empowering users to act as owners and borrowers on Lendr, we allow people to 
 
 Why?
 
-_Side Hustle, yo!_ We all have stuff that can be onverted to cold, hard cash. By renting our your belongings through Lendr, you make your stuff work for you, and save yourself the time, space and dollars required to make room for things you don't need.
+_Side Hustle, yo!_ We all have stuff that can be converted to cold, hard cash. By renting our your belongings through Lendr, you make your stuff work for you, and save yourself the time, space and dollars required to make room for things you don't need.
 
 _Encourage a more circular and sharing economy_.
 Instead of the usual vicious make, use, dispose cycle, keep your specialised and niche items in use for as long as possible. Extract the maximum value from your belongings by keeping them available but out of sight until you need it again.
@@ -123,14 +124,16 @@ Return the item to the lender per the agreed terms and timeframe, and leave them
 
 ## <a id="Application"></a>Application
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
-1. Describe the network infrastructure the App may be based on.
+_Describe the network infrastructure the App may be based on._
+
     * Research into how we understand the hosting infrastructure
     * Heroku - host on one machine.
     * AWS - hosting our images.
     * Scalability (servers to manage requests), redundancies (if something fails)
 
 ### <a id="Software"></a>Software
-5. Identify and describe the software to be used in your App.
+_Identify and describe the software to be used in your App._
+
     Describe the tech stack used for the application
     * Ruby on Rails - framework.
     * Ruby - programming language.
@@ -138,86 +141,103 @@ Return the item to the lender per the agreed terms and timeframe, and leave them
     * HTML - semantic.
 
 ### <a id="Architecture"></a>Architecture
-8. Describe the architecture of your App.
+_Describe the architecture of your App._
+
     * Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
     * Yes go into detail about MVC, don’t describe any model associations yet
 
 ### <a id="Components"></a>Components
-9. Explain the different high-level components (abstractions) in your App.
+**Explain the different high-level components (abstractions) in your App.**
+
     * High level components examples?
     * Using Gems instead of rebuilding the code.
     * Active Record is an abstraction of SQL
     * You could talk how ruby gems are an abstraction from your own ruby code. You could also talk about how active record is an abstraction of sql.
 
 ### <a id="Third-Party-Services"></a>Third Party Services
-10. Detail any third party services that your App will use.
+_Detail any third party services that your App will use._
     * APIs?
     * Heroku?
     * AWS?
 
 ### <a id="Database"></a>Database
 #### <a id="Database-Justification"></a>Database Justification
-6. Identify the database to be used in your App and provide a justification for your choice.
+_Identify the database to be used in your App and provide a justification for your choice._
     * Why we use Postgres instead of SQLite (because SQLite can only do one thing at a time)
     * Full excellent discussion of database used
     * Pros and Cons of Postgresql over SQLite (more than one thing at a time)
     * How postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
 
 #### <a id="Production-Database"></a>Production Database
-7. Identify and describe the production database setup (i.e. postgres instance).
+_Identify and describe the production database setup (i.e. postgres instance)._
     * Database being setup on Heroku and Postgres (Postgres provided a development version and a production version)
     * Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
 
 #### <a id="Market-Research"></a>Market Research
-1.  Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
+_Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb)._
     * Market research: Things version of Airbnb, similar rental model (difference: for objects not accommodation)
     * Ziilch (difference: users are giving away items for free)
     * Gumtree, eBay (difference: users are buying/seller goods for ownership not rental)
     * Fashion Rentals/Rent Furniture, etc. (difference: companies own inventory)
 
 #### <a id="Database-Relations"></a>Database Relations
-12. Discuss the database relations to be implemented.
+_Discuss the database relations to be implemented._
     * ERD - describe model associations and why.
     * This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
 
-13. Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other.
+_Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other._
     * Associations - e.g. has many, has one, etc???
     * Think about rails active record associations, has_many, has_one, belongs_to
 
 #### <a id="Entity-Relationship-Diagram"></a>Entity Relationship Diagram
-14. Provide your database schema design.
-    * Flawless, complex, complete, well thought of ERD?
-    * Insert schema image - provide the schema image from DB Database
+_Provide your database schema design._
+
+Our database schema design is represented in the ERD below showing the major entities within our application system, and the interrelationships among them.
+
+![ERD](/app/assets/readme/lendr-erd.png)
 
 ## <a id="Project-Management"></a>Project Management
+### <a id="Inspiration"></a>Inspiration
+As a starting point for inspiration for Lendr, we created a collaborative Pinterest board to find design influences and ideas for general UX/UI, colour schemes, typography, and looking at other two-sided marketplaces applications for both desktop and mobile.
+
+![Pinterest](/app/assets/readme/lendr-pinterest.png)
+
 ### <a id="User-Stories"></a>User Stories
-1.  Provide User stories for your App.
+_Provide User stories for your App._
+
+User stories were written from the perspective of the Lendr end user to guide the features and functionalities of our MVP: general users (guests), owners and borrowers.
+* General users are guests who have not signed up to Lendr who are browsing and are potential users for the platform.
+* Owners and borrowers are registered users who can access all features and functionality. As Lendr is a two-sided marketplace, a single user can be both a owner and a borrower.
+
+![Trello User Stories](/app/assets/readme/lendr-trello-user-stories.png)
 
 ### <a id="Wireframes"></a>Wireframes
-16. Provide Wireframes for your App.
+**Provide Wireframes for your App.**
+
+
+https://www.figma.com/file/GgOm1rE5oiUrEOCeMAOWv11p/Lendr?node-id=0%3A1
 
 ### <a id="Task-Management"></a>Task Management
-17. Describe the way tasks are allocated and tracked in your project.
+**Describe the way tasks are allocated and tracked in your project.**
 
-![Trello Project](/app/assets/readme/trello-lendr.png)
-![Trello User Stories](/app/assets/readme/trello-user-stories.png)
+![Trello](/app/assets/readme/lendr-trello-project-management.png)
 
-    * Trello: source of truth.
-    * Pinterest: inspiration and design references for UX/UI, branding.
-    * Google Docs: for shared documents and note-taking.
-    * Balsamiq: basic wireframes.
-    * Figma: detailed wireframes.
-    * Slack: daily communication.
+* Trello: source of truth.
+* Pinterest: inspiration and design references for UX/UI, branding.
+* Google Docs: for shared documents and note-taking.
+* Balsamiq: basic wireframes.
+* Figma: detailed wireframes.
+* Slack: daily communication.
 
 ### <a id="Agile-Methodologies"></a>Agile Methodologies
-1.   Discuss how Agile methodology is being implemented in your project.
-    * Discuss how Agile methodology is being implemented in your project.
-    * Documents comprehensive plan for agile methodology, with extensive evidence of use
-    * https://guide.freecodecamp.org/agile
-    * Scrum Master - Linda
-    * Daily Scrum (Standups)
-    * User Stories - to describe one or more features from the perspective of the end user 
-    * (Mini-Sprints - by hours/days)
+**Discuss how Agile methodology is being implemented in your project.**
+* Discuss how Agile methodology is being implemented in your project.
+* Documents comprehensive plan for agile methodology, with extensive evidence of use
+* https://guide.freecodecamp.org/agile
+* Scrum Master - Linda
+* Daily Scrum (Standups)
+* User Stories - to describe one or more features from the perspective of the end user 
+(Mini-Sprints - by hours/days)
     * Continuous Deployment/Delivery - deploying every day, commits 
 
 ### <a id="Coding"></a>Coding
@@ -234,9 +254,13 @@ Brief description of the coding process:
     * Commit after every working code snippet.
     * Create new branch for each feature to be worked on.
 
+### <a id="Deployment"></a>Deployment
+1.  Provide an overview and description of your Source control process.
+    * Database errors - drop, reset, seed, edit.
+
 ## <a id="Testing-and-Information-Security"></a>Testing and Information Security
 ### <a id="Testing"></a>Testing
-20. Provide an overview and description of your Testing process.
+1.  Provide an overview and description of your Testing process.
   Meets D with tests documented or defined for all user stories, extensive use of unit testing on code completed thus far, and well organized test results
     * User Stories for Malicious Use?
     * https://www.railstutorial.org/book/static_pages
@@ -277,13 +301,22 @@ https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/busine
 
 ## <a id="Minimum-Viable-Product"></a>Minimum Viable Product
 ### <a id="Challenges"></a>Challenges
+* Carousel: simple to implement w/o bootstrap.
+* Associations - visible in view, connecting comments to users, transactions (form), displayed under item.
+* Mailgun - odd errors with fetch.
+* GitHub - flow was difficult.
+* Heroku errors - finicky.
+* CSS - transalating/merging usual HTML and Ruby syntax into CSS.
+* Balancing between MVP and limited time frame - pull back and strip back to beta version, proof of function/concept.
 
 ### <a id="Future-Enhancements"></a>Future Enhancements
 * Make the code DRY
-* Geocoder
+* Geocoder: Maps
+* Scheduler: Book in Advance
+* Internal Messenging Function
 
 ### <a id="Ethical-Considerations"></a>Ethical Considerations
-* Prohibited Items: single use items, living creatures, etc.
+* Prohibited Items: single use items, living creatures, etc., medical/hazardous, stuff that requires a licence to run, underage/overage, personal services (e.g escort)
 * Malicious Use
 * Insurance/Fraud
 
