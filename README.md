@@ -378,12 +378,12 @@ As legal obligations in relation to handling user data vary across different cou
 Throughout the project, we encountered some challenges and setbacks which required debugging, rolling back to previous versions, scrapping or using an alternative workaround, including:
 
 * _Associations_: Creating the correct model associations so they could be called upon and visible in different view pages - connecting comments (reviews) to specific users, linking users to transactions, displaying transaction comments under each item with the correct authorisation (i.e. only owners and borrowers who have participated in a transaction can create a comment, this comment will then be visible to all users).
-* _Time Management_: due to the two-week timeframe and unforseen setbacks, this meant rapidly scaling the design and functionality up and down to the most polished version of an MVP/beta that could act as proof of concept.
-* _GitHub_: using GitHub collaboratively with branches and different workflows proved to be quite tricky and nerve-wracking, generating merge conflicts that needed to be resolved or versions that needed to be rolled back.
-* _HTML/CSS_: merging usual HTML and CSS syntax with embedded Ruby (erb) made styling even more time-consuming than usual. 
-* _Mailgun_: resolving odd errors with fetch.
-* _Heroku_: resolving Heroku errors involved debugging following a errors checklist and using Heroku's maddeningly vague logs to resolve, also needed to edit, drop, reset and seed a number of tables.
-* _Carousel & Multiple Images_: trying to get a carousel and multiple image upload that was compatible proved to be time-consuming, requiring some trial and error with Bootstrap and JavaScript to make work.
+* _Time Management_: Due to the two-week timeframe and unforseen setbacks, this meant rapidly scaling the design and functionality up and down to the most polished version of an MVP/beta that could act as proof of concept.
+* _GitHub_: Using GitHub collaboratively with branches and different workflows proved to be quite tricky and nerve-wracking, generating merge conflicts that needed to be resolved or versions that needed to be rolled back.
+* _HTML/CSS_: Merging usual HTML and CSS syntax with embedded Ruby (erb) made styling even more time-consuming than usual. 
+* _Errors_: Checking error logs and resolving bugs, such as Heroku and Mailgun.
+* _Heroku_: Resolving Heroku errors involved debugging following a errors checklist and using Heroku's maddeningly vague logs to resolve, also needed to edit, drop, reset and seed a number of tables.
+* _Carousel & Multiple Images_: Trying to get a carousel and multiple image upload that was compatible proved to be time-consuming, requiring some trial and error with Bootstrap and JavaScript to make work.
 
 ### <a id="Future-Enhancements"></a>Future Enhancements
 Given the opportunity to implement additional functionality, future enhancements would include:
