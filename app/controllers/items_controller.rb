@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
     # Lendr: Pundit authorisation for item
-    # authorize @item
+    authorize @item
   end
 
   # POST /items
@@ -62,7 +62,7 @@ class ItemsController < ApplicationController
   # DELETE /items/1.json
   def destroy
     # For Pundit authorisation
-    # authorize @item
+    authorize @item
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }

@@ -13,7 +13,7 @@
     -webkit-appearance: none;
 }
 
-input:not([type='checkbox']), 
+input:not([type='checkbox']):not([type='radio']),  
 textarea {
     width: 100%;
     padding: 10px 0;

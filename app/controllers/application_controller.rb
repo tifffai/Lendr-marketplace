@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
     # Lendr: To permit additional parameters in the User table.
     before_action :configure_permitted_parameters, if: :devise_controller?
 
+    include Pundit
+
     protected
 
     # Lendr: To allow User fields in addition to username and password.

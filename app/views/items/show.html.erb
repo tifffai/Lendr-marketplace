@@ -49,11 +49,14 @@
   <%= @item.state %>
 </p>
 
+<br><br>
 
-<h2>Rent Now</h2>
+<h2>RENT NOW.</h2>
 
 <% if @item.next_available < Time.now %>
   <strong>AVAILABLE: This listing is available for rent now!</strong>
+
+  <br><br>
 
     <%= form_tag charges_path do %>
       <article>
@@ -80,7 +83,7 @@
 <hr>
 <br>
 
-<h3>Comments</h3>
+<h3>COMMENTS</h3>
 
 <p>
   <% @item.comments.each do |comment| %>
