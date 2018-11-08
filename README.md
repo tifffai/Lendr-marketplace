@@ -122,12 +122,20 @@ Return the item to the lender per the agreed terms and timeframe, and leave them
 
 ## <a id="Application"></a>Application
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
-_Describe the network infrastructure the App may be based on._
+Describe the network infrastructure the App may be based on.
 
-* Research into how we understand the hosting infrastructure
-* Heroku - host on one machine.
-* AWS - hosting our images.
-* Scalability (servers to manage requests), redundancies (if something fails)
+We deployed our application in the cloud using Heroku - a platform as a service (PaaS) with the Heroku Postgres add-on (DbaaS). This provided us with an app-centric workflow and the necessary tools to deploy, run, manage, secure and scale our application  
+
+This meant we didn’t have to concern ourselves with infrastructure headaches such as configuring hardware and setting up localised servers, we were able to focus on coding and development. 
+
+Other appealing aspects of Heroku included:
+•	Instant deployment with Git push - build of our application is performed by    
+    Heroku using our build scripts.
+•	Plenty of Add-on resources (applications, databases etc.) to improve our apps                      functionality in the future. 
+•	Processes scaling - independent scaling for each component of your app without      affecting      functionality and performance.
+•	Isolation - each process (aka dyno) is completely isolated from each other
+•	Full Logging and Visibility - easy access to all logging output from every          component      of our app and each process (dyno).
+
 
 ### <a id="Software"></a>Software
 _Identify and describe the software to be used in your App._
@@ -161,11 +169,20 @@ _Detail any third party services that your App will use._
 
 ### <a id="Database"></a>Database
 #### <a id="Database-Justification"></a>Database Justification
-_Identify the database to be used in your App and provide a justification for your choice._
-* Why we use Postgres instead of SQLite (because SQLite can only do one thing at a time)
-* Full excellent discussion of database used
-* Pros and Cons of Postgresql over SQLite (more than one thing at a time)
-* How postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
+3.	Identify the database to be used in your App and provide a justification for your choice.
+For our purposes, we chose to develop our app with PostgreSQL due to its performance, security concerns and ability to deploy with Heroku.
+
+We found PostgreSQL desirable for the following areas of focus:
+
+Free, open-source: PostgreSQL is a free, completely open-source software solution
+
+Performance: PostgreSQL is widely used in large systems where read and write speeds are crucial and data needs to be validated. It also handles systems requiring execution of complex queries. 
+ACID Compliance: Ensures, that during database transactions, no data is lost or miscommunicated across the system in the event of errors or power failure, even if multiple changes are made during a single transaction
+
+Security:  In order to protect sensitive data from illegitimate use, malicious threats and attacks PostgreSQL has the security measures we require. PostgreSQL has roles and inherited roles to set and maintain permissions. PostgreSQL has native SSL support for connections to encrypt client/server communications. It also has Row Level Security.
+
+Community support: PostgreSQL has a very strong and active community that constantly improves existing features while its innovative committers strive to ensure it remains the most advanced database with new cutting-edge features and security.
+
 
 #### <a id="Production-Database"></a>Production Database
 _Identify and describe the production database setup (i.e. postgres instance)._
