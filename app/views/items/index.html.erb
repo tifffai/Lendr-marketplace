@@ -6,6 +6,9 @@
 
 <br><br>
 
+<div>
+</div>
+
 <table class="index-table">
   <thead class="index-table-head">
     <tr>
@@ -57,3 +60,36 @@
 
 <%= link_to 'New Item', new_item_path %>
 
+
+<hr>
+
+<div class='item-display-box'>
+  <% @items.each do |item| %>
+    <div class='item-photo-box'>
+      <%= image_tag item.images.first, height: '150'%>
+    </div>
+    <div class='item-details-box'>
+      <p>ITEM: <%= item.name %></p>
+      <p>CATEGORY: <%= link_to item.category.name, item.category %></p>
+      <p>DESCRIPTION: <%= item.description %></p>
+      <p>PRICE: <%= number_to_currency(item.price/100.0) %></p>
+      <p>LOCATION: <%= item.suburb %>, <%= item.state %></p>
+      <p>AVAILABILITY: 
+        <% if item.next_available < Time.now %>
+          <strong>AVAILABLE!</strong>
+          <% else %>
+          <strong>UNAVAILABLE!</strong>
+        <% end %>
+      </p>
+      <p>NEXT AVAILABLE: <%= item.next_available.strftime('%a, %e %b %Y') %></p>
+    </div>  
+    <div class='item-links-box'>
+        <p><%= link_to 'Show', item %>
+      <% if item.user == current_user %>  
+        | <%= link_to 'Edit', edit_item_path(item) %>
+        | <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
+    </div>
+
+    <% end %>
+</div>

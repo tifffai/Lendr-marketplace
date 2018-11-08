@@ -17,12 +17,6 @@
  /* --- CSS Global Styling across all pages 
  --------------------------------------------- */
 
-/* * {
-    margin:0;
-    padding:0;
-} */
-
-
 body {
     text-align: center;
     background-color: #1E1C1C;
@@ -32,7 +26,7 @@ body {
 h1 {
     font-family: 'Muli', sans-serif;
     line-height: 12%;
-    font-size: 5em;
+    font-size: 6.3em;
 }
 
 h2 {
@@ -60,6 +54,8 @@ p {
 .main-header {
     display: flex; 
     justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 6%;
 }
 
 nav {
@@ -105,22 +101,38 @@ body a:hover {
     text-align: center;
 }
 
-
-/* Grid setups
---------------------------------------------- */
-.grid-navbar {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 1fr, 5fr, 2fr;
-    grid-template-columns: 1fr, 2fr, 4fr;
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media only screen and (max-width: 640px) and (orientation: portrait) {
+    h1 {
+        font-size: 5em;
+    }
+    
+    h2 {
+        font-size: 4em;
+    }
+    
+    .main-header {
+        transform: scale(0.8);
+        margin-left: 0;
+    }
 }
 
-.grid-browse-page {
-    // display: grid;
-    height: 100vh;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: 0.5fr repeat(9, 1fr) 0.5fr;
-}
+
+// /* Grid setups
+// --------------------------------------------- */
+// .grid-navbar {
+//     display: grid;
+//     height: 100vh;
+//     grid-template-rows: 1fr, 5fr, 2fr;
+//     grid-template-columns: 1fr, 2fr, 4fr;
+// }
+
+// .grid-browse-page {
+//     // display: grid;
+//     height: 100vh;
+//     grid-template-rows: repeat(5, 1fr);
+//     grid-template-columns: 0.5fr repeat(9, 1fr) 0.5fr;
+// }
 
 /* Table Styling
 --------------------------------------------- */
@@ -156,6 +168,10 @@ body.pages.welcome .home-logo {
     margin-top: 10%;
 }
 
+body.pages.welcome .main-header {
+    margin-left: 30%;
+}
+
 body.pages.welcome a, a:visited, a:link, a:active {
     text-decoration: none;
     text-transform: uppercase;
@@ -169,15 +185,29 @@ body.pages.welcome a:hover {
     text-transform: uppercase;
 }
 
+/* Small devices (portrait tablets and large phones, 640px and up) */
+@media only screen and (max-width: 640px) and (orientation: portrait) {
+    body.pages.welcome .home-logo {
+        transform: scale(0.5);
+    }
+    
+    body.pages.welcome .home-tagline {
+        text-align: right;
+        margin-left: 40%;
+        width: 180px;
+    }
+
+}
+
 
  /* --- CSS Styling for Users#Login page 
 --------------------------------------------- */
- body.users.sign_in {
+ body.devise.registrations {
     background-image: image-url('brunel-johnson-1073779-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    color:  #1E1C1C;
+    color:  red;
 }
 
 
@@ -240,12 +270,19 @@ body.categories.index .browse-search .search-btn, body.categories.show .browse-s
     grid-template-rows: repeat(3, 1fr);
 }
 
+.browse-category-grid  img {
+    transform: scale(2.3);
+    margin-bottom: 2%;
+}
+
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
 
     .browse-category-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        height: 60vh;
         font-family: 'Lato', sans-serif;
         font-size: 8px;
         text-transform: uppercase;
@@ -253,104 +290,20 @@ body.categories.index .browse-search .search-btn, body.categories.show .browse-s
         line-height: 1em;
     }
 
-    // .style-fashion img {
-    //     transform: scale(1.2);
-    // }
 
-    // .style-fashion {
-    //     grid-column: 1 / 2;
-    //     grid-row: 3 / 4;
-    // }
+    .browse-category-grid  img {
+        transform: scale(1.7);
+        margin-bottom: 2%;
+    }
+
+    body.categories.index .browse-search {
+        transform: scale(0.8)
+    }
+
 }
 
-// body.categories.index .browse-category-grid {
-//     font-family: 'Lato', sans-serif;;
-//     font-size: 8px;
-//     font-weight: 300;
-//     grid-row: 3 / 4;
-//     grid-column: 2 / 11;
-//     display: inline-block;
-//     display: flex;
-//     align-content: center;
-//     justify-content: space-between;
-//     background-color: lightsalmon;
-// }
 
-
-
-
-
-// body.categories.index .browse-category-card {
-//     width: 100px;
-// }
-
-// body.categories.index .style-kids {
-//     grid-row: 3 / 4;
-//     grid-column: 2 / 3;
-//     // width: 100px;
-//     background-color: red;
-//     display: flex;
-//     flex-direction: column;
-// }
-// body.categories.index .style-home {
-//     grid-row: 3 / 4;
-//     grid-column: 3 / 4;
-//     // width: 100px;
-//     background-color: lightgreen;
-//     display: flex;
-// }
-// body.categories.index .style-outdoor {
-//     grid-row: 3 / 4;
-//     grid-column: 4 / 5;
-//     // width: 100px;
-//     background-color: lightskyblue;
-//     display: flex;
-// }
-// body.categories.index .style-fashion {
-//     grid-row: 3 / 4;
-//     grid-column: 5 / 6;
-//     // width: 100px;
-//     // background-color: red;
-//     display: flex;
-// }
-// body.categories.index .style-events {
-//     grid-row: 3 / 4;
-//     grid-column: 6 / 7;
-//     // width: 100px;
-//     // background-color: red;
-//     display: flex;
-// }
-// body.categories.index .style-recreation {
-//     grid-row: 3 / 4;
-//     grid-column: 8 / 9;
-//     // width: 100px;
-//     // background-color: red;
-//     display: flex;
-// }
-// body.categories.index .style-office {
-//     grid-row: 3 / 4;
-//     grid-column: 9 / 10;
-//     // width: 100px;
-//     // background-color: red;
-//     display: flex;
-// }
-// body.categories.index .style-electronics {
-//     grid-row: 3 / 4;
-//     grid-column: 10 / 11;
-//     // width: 100px;
-//     // background-color: red;
-//     display: flex;
-// }
-// body.categories.index .style-miscellaneous {
-//     grid-row: 3 / 4;
-//     grid-column: 11 / 12;
-//     // width: 100px;
-//     // background-color: red;
-//     display: flex;
-// }
-
-
- /* --- CSS Styling for Item#Show page 
+ /* --- CSS Styling for Item#Index page 
  --------------------------------------------- */
 
 
@@ -374,10 +327,6 @@ body.categories.index .browse-search .search-btn, body.categories.show .browse-s
     vertical-align: middle;
     display: inline-block;
 }
-
-/* .image-slider .slick-prev:before, .image-slider .slick-next:before {
-    color: #000;
-} */
 
 
 
@@ -412,3 +361,134 @@ body.categories.index .browse-search .search-btn, body.categories.show .browse-s
 .rating-input:checked ~ .rating-star {
     background-position: 0 0;
 }
+
+
+ /* --- CSS Styling for All Forms 
+--------------------------------------------- */
+.item-form, .signup-form, .edit-signup-form, .login-form, .resend-confirm-form, .change-password-form, .edit-change-password-form, .unluck-instruction-form {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.comment-form {
+    width: 40vw;
+    margin: 0 auto;
+}
+
+.field {
+    position: relative;
+    -webkit-appearance: none;
+}
+
+input:not([type='checkbox']):not([type='radio']),  
+textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    
+}
+
+.nice-select { 
+    color: black;
+    font-size: 12px;
+}
+
+input:-webkit-autofill, 
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #1E1C1C inset;
+    -webkit-text-fill-color: #fff;
+}
+
+.field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: -15;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+    -webkit-appearance: none;
+}
+
+.field input:focus ~ label,
+.field textarea:focus ~ label,
+.field input:valid ~ label,
+.field textarea:valid ~ label,
+.picker-input ~ label{
+    top: -18px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+::placeholder {
+    line-height: 63px;
+    font-size: 10px;
+}
+
+
+div.datedropper.lendr-calendar {
+    border-radius: 6px;
+    width: 200px;
+  }
+  div.datedropper.lendr-calendar .picker {
+    border-radius: 6px;
+    box-shadow: 0 0 18px 9px rgba(0, 0, 0, 0.26);
+  }
+  div.datedropper.lendr-calendar .pick-l {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  div.datedropper.lendr-calendar:before,
+  div.datedropper.lendr-calendar .pick-submit,
+  div.datedropper.lendr-calendar .pick-lg-b .pick-sl:before,
+  div.datedropper.lendr-calendar .pick-m,
+  div.datedropper.lendr-calendar .pick-lg-h {
+    background-color: #1E1C1C;
+  }
+  div.datedropper.lendr-calendar .pick-y.pick-jump,
+  div.datedropper.lendr-calendar .pick li span,
+  div.datedropper.lendr-calendar .pick-lg-b .pick-wke,
+  div.datedropper.lendr-calendar .pick-btn {
+    color: #1E1C1C;
+  }
+  div.datedropper.lendr-calendar .picker,
+  div.datedropper.lendr-calendar .pick-l {
+    background-color: #FFF;
+  }
+  div.datedropper.lendr-calendar .picker,
+  div.datedropper.lendr-calendar .pick-arw,
+  div.datedropper.lendr-calendar .pick-l {
+    color: #4D4D4D;
+  }
+  div.datedropper.lendr-calendar .pick-m,
+  div.datedropper.lendr-calendar .pick-m .pick-arw,
+  div.datedropper.lendr-calendar .pick-lg-h,
+  div.datedropper.lendr-calendar .pick-lg-b .pick-sl,
+  div.datedropper.lendr-calendar .pick-submit {
+    color: #fff;
+  }
+  div.datedropper.lendr-calendar.picker-tiny:before,
+  div.datedropper.lendr-calendar.picker-tiny .pick-m {
+    background-color: #FFF;
+  }
+  div.datedropper.lendr-calendar.picker-tiny .pick-m,
+  div.datedropper.lendr-calendar.picker-tiny .pick-m .pick-arw {
+    color: #4D4D4D;
+  }
+  div.datedropper.lendr-calendar.picker-lkd .pick-submit {
+    background-color: #FFF;
+    color: #4D4D4D;
+  }
+  
