@@ -131,10 +131,10 @@ This meant we didn’t have to concern ourselves with infrastructure headaches s
 Other appealing aspects of Heroku included:
 •	Instant deployment with Git push - build of our application is performed by    
     Heroku using our build scripts.
-•	Plenty of Add-on resources (applications, databases etc.) to improve our apps       functionality in the future. 
-•	Processes scaling - independent scaling for each component of your app without      affecting functionality and performance.
+•	Plenty of Add-on resources (applications, databases etc.) to improve our apps                      functionality in the future. 
+•	Processes scaling - independent scaling for each component of your app without      affecting      functionality and performance.
 •	Isolation - each process (aka dyno) is completely isolated from each other
-•	Full Logging and Visibility - easy access to all logging output from every          component of our app and each process (dyno).
+•	Full Logging and Visibility - easy access to all logging output from every          component      of our app and each process (dyno).
 
 
 ### <a id="Software"></a>Software
