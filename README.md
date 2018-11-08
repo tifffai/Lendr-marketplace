@@ -74,7 +74,6 @@ As a counterargument to the constant bombardment of nudges to buy, own, collect 
 
 ## <a id="Problem"></a>Problem
 *Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?*
-
 Though access and connectivity to people and things has never been greater, simultaneously we're time-poor, distracted, our wallet needs to stretch just a bit further and the planet is choking from cheaply-made, mass-produced items. 
 
 While in the past things were built to last and updated based on needs rather than wants, today we have been conditioned to go for the new shiny thing and to discard older but perfectly functional belongings - things that are of little or no immediate use to us but with a lot of shelf life left in it.
@@ -145,11 +144,14 @@ _Describe the architecture of your App._
 * Yes go into detail about MVC, don’t describe any model associations yet
 
 ### <a id="Components"></a>Components
-**Explain the different high-level components (abstractions) in your App.**
-* High level components examples?
-* Using Gems instead of rebuilding the code.
-* Active Record is an abstraction of SQL
-* You could talk how ruby gems are an abstraction from your own ruby code. You could also talk about how active record is an abstraction of sql.
+_Explain the different high-level components (abstractions) in your App._
+The abstraction principles applied to object-oriented programming languages and frameworks like Ruby and Rails aim to minimise duplication of information within a program by making common functionalities modulear through abstractions or software libraries.
+
+Doing so means that code is more efficient and DRY (generalised as the 'Don't Repeat Yourself' principle), developers can work more efficiently (by not having to code common functions from scratch or repetitively), thereby reducing redundancies overall. With Rails, there are a numerous abstractions where functions 'automagically' happen, ultimately creating efficiencies in the long run but a steeper learning curve for beginners (to put it mildly).
+
+Instances of different high-level components (abstractions) used in our project include:
+* Using Ruby Gems like Devise, Pundit, Stripe and AWS to easily download, install and use libraries with a specfic piece of functionality and assets and files related to functionality.
+* As the model component in the Model-View-Controller architecture of Rails, the ActiveRecord module is a form of database extraction, building into the Rails framework a database adapter to connect to SQLite, MySQL and PostgreSQL, so that it isn't dependent upon any one database, and can be invoked as needed. 
 
 ### <a id="Third-Party-Services"></a>Third Party Services
 _Detail any third party services that your App will use._
@@ -236,7 +238,8 @@ Additionally, the following platforms were used throughout the project to assist
 * _Slack_: private channel created for daily communication.
 
 ### <a id="Agile-Methodologies"></a>Agile Methodologies
-**Discuss how Agile methodology is being implemented in your project.**
+_Discuss how Agile methodology is being implemented in your project._
+
 With a firm eye towards MVP throughout the project, we endeavoured to follow an Agile approach through adaptive planning, iterative development, quick delivery and continual improvement, which enabled us to respond more rapidly and flexibly to change. True enough, throughout the process we were forced to and able to scale our project up and down when faced with setbacks or opportunities to improve what had aleady been set up.
 
 The following methodologies were used:
@@ -253,24 +256,22 @@ GitHub was used to manage version-control of the source code amongst multiple co
 Throughout the coding process, we tried to remember to commit early and often, use branches and leave detailed comment, with varying levels of success). Being our first times using GitHub collaboratively, overall we felt the source control process was managed well without any major conflicts or errors, allowing us to grow slightly more comfortable with this type of workflow.
 
 ### <a id="Deployment"></a>Deployment
-1.  Provide an overview and description of your Source control process.
-    * Database errors - drop, reset, seed, edit.
+After deploying to Heroku after the first few days, we encountered a number of errors to be resolved. Faced with some unexpected setbacks in relation to the source code, we priortisied resolving these locally first and debugging deployment errors after. This was exascerbated by the relatively brief and non-specific error messages available in the Heroku dashboard and logs in Terminal.
+
+Once our source code was more stable and CSS styling became more of a focus, the next deployment to Heroku was relatively successful and stable - the most challenging aspect of resolving these involved database errors, requiring us to edit, drop, reset and seed a number of tables. After some experimentation, we were able to successfully deploy our completed version to Heroku.
 
 ## <a id="Testing-and-Information-Security"></a>Testing and Information Security
 ### <a id="Testing"></a>Testing
-1.  Provide an overview and description of your Testing process.
-  Meets D with tests documented or defined for all user stories, extensive use of unit testing on code completed thus far, and well organized test results
-    * User Stories for Malicious Use?
-    * https://www.railstutorial.org/book/static_pages
+_Provide an overview and description of your Testing process._
+Being new to test-driven development (TDD) and RSpec, our testing process involved User Acceptance Testing (UAT), where our software was tested in the "real world" by the intended audience - by kindly asking (bribing) fellow students, friends and family to use the platform and to check overall functionality (adding, editing deleting and viewing items and categories), authentication, authorisation, Stripe payments and Mailer.
 
-As Scott just mentioned on slack feedback from another student would suffice:
-* When deciding when and how to test, it’s helpful to understand why to test. In my view, writing automated tests has three main benefits:
-* Tests protect against regressions, where a functioning feature stops working for some reason.
-* Tests allow code to be refactored (i.e., changing its form without changing its function) with greater confidence.
-* Tests act as a client for the application code, thereby helping determine its design and its interface with other parts of the system.
+Understanding when, how and what to test proved to be the most challenging part. Given more time and familarity with TDD and RSpec, we would have liked to have more practice writing tests and delivering the main benefits of:
+* Protecting against regression, where a functioning feature errors out for some reason;
+* Refactoring code, i.e. changing the source code without changing the function;
+* Acting as a client for the application code, to influence its design and interface with other parts of the system.
 
 ### <a id="Information-Security-Requirements"></a>Information Security Requirements
-21.  Discuss and analyse requirements related to information system security.
+_Discuss and analyse requirements related to information system security._
     * Payment Security?
     * Customer Data Protection?
     * Disputes - Reviews/Comments
@@ -279,7 +280,7 @@ As Scott just mentioned on slack feedback from another student would suffice:
 Make this a more general analysis of the ethics behind handling user data.
 
 ### <a id="Information-Security-Methodologies"></a>Information Security Methodologies
-22. Discuss methods you will use to protect information and data.
+_Discuss methods you will use to protect information and data._
     * Encryption - hashing passwords automatically.
     * Stripe - what manages and protects all credit card information
     * Pundit - controls authorisations and what users can see.
@@ -290,7 +291,7 @@ https://www.oaic.gov.au/agencies-and-organisations/guides/guide-to-securing-pers
     * Pundit - controls authorisations and what users can see
 
 ### <a id="User-Data-Management"></a>User Data Management
-23. Research what your legal obligations are in relation to handling user data.
+_Research what your legal obligations are in relation to handling user data._
 * Cookies - disclaimers for use of cookies to track user data.
 * Privacy - using customer data for data analytics, marketing purposes.
 https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/businesses/
@@ -299,6 +300,10 @@ https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/busine
 
 ## <a id="Minimum-Viable-Product"></a>Minimum Viable Product
 ### <a id="Challenges"></a>Challenges
+Throughout the project, we encountered some challenges and setbacks which required debugging, rolling back to previous versions, scrapping or using an alternative workaround, including:
+
+* _1_:
+
 * Carousel: simple to implement w/o bootstrap.
 * Associations - visible in view, connecting comments to users, transactions (form), displayed under item.
 * Mailgun - odd errors with fetch.
