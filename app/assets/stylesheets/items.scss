@@ -1,3 +1,128 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.item-form {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.field {
+    position: relative;
+    -webkit-appearance: none;
+}
+
+input:not([type='checkbox']), 
+textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    -webkit-appearance: none;
+    
+}
+
+.nice-select { 
+    color: black;
+    font-size: 12px;
+}
+
+input:-webkit-autofill, 
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #1E1C1C inset;
+    -webkit-text-fill-color: #fff;
+}
+
+.field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: -15;
+    padding: 10px 0;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+    -webkit-appearance: none;
+}
+
+.field input:focus ~ label,
+.field textarea:focus ~ label,
+.field input:valid ~ label,
+.field textarea:valid ~ label,
+.picker-input ~ label{
+    top: -18px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+::placeholder {
+    line-height: 63px;
+    font-size: 10px;
+}
+
+
+
+div.datedropper.lendr-calendar {
+    border-radius: 6px;
+    width: 200px;
+  }
+  div.datedropper.lendr-calendar .picker {
+    border-radius: 6px;
+    box-shadow: 0 0 18px 9px rgba(0, 0, 0, 0.26);
+  }
+  div.datedropper.lendr-calendar .pick-l {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  div.datedropper.lendr-calendar:before,
+  div.datedropper.lendr-calendar .pick-submit,
+  div.datedropper.lendr-calendar .pick-lg-b .pick-sl:before,
+  div.datedropper.lendr-calendar .pick-m,
+  div.datedropper.lendr-calendar .pick-lg-h {
+    background-color: #1E1C1C;
+  }
+  div.datedropper.lendr-calendar .pick-y.pick-jump,
+  div.datedropper.lendr-calendar .pick li span,
+  div.datedropper.lendr-calendar .pick-lg-b .pick-wke,
+  div.datedropper.lendr-calendar .pick-btn {
+    color: #1E1C1C;
+  }
+  div.datedropper.lendr-calendar .picker,
+  div.datedropper.lendr-calendar .pick-l {
+    background-color: #FFF;
+  }
+  div.datedropper.lendr-calendar .picker,
+  div.datedropper.lendr-calendar .pick-arw,
+  div.datedropper.lendr-calendar .pick-l {
+    color: #4D4D4D;
+  }
+  div.datedropper.lendr-calendar .pick-m,
+  div.datedropper.lendr-calendar .pick-m .pick-arw,
+  div.datedropper.lendr-calendar .pick-lg-h,
+  div.datedropper.lendr-calendar .pick-lg-b .pick-sl,
+  div.datedropper.lendr-calendar .pick-submit {
+    color: #fff;
+  }
+  div.datedropper.lendr-calendar.picker-tiny:before,
+  div.datedropper.lendr-calendar.picker-tiny .pick-m {
+    background-color: #FFF;
+  }
+  div.datedropper.lendr-calendar.picker-tiny .pick-m,
+  div.datedropper.lendr-calendar.picker-tiny .pick-m .pick-arw {
+    color: #4D4D4D;
+  }
+  div.datedropper.lendr-calendar.picker-lkd .pick-submit {
+    background-color: #FFF;
+    color: #4D4D4D;
+  }
+  

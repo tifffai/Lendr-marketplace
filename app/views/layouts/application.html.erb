@@ -5,40 +5,55 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,900|Muli:200,300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datedropper3@3.0.0/datedropper.css"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
   <%# Lendr: Add Navigation links to appear on every view %>
     <% unless current_page?(root_path) %>
-      <div class='home-logo-box'>
+      <div class='navbar-logo-box'>
         <%= link_to image_tag('LendR_logo_white.png', width: 80), root_path, :alt => "Home Page" %>
       </div>
     <% end %>
 
-    <nav>
-      <% if user_signed_in? %>
-        <%= link_to('Browse', categories_path) %>
-        <%= link_to('View All', items_path) %>
-        <%= link_to('Post New', new_item_path) %>
-        <%= link_to('Dashboard', dashboard_path) %>
-        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-      <% else %>
-        <%= link_to('Browse', categories_path) %>
-        <%= link_to('View All', items_path) %>
-        <%= link_to('Login', new_user_session_path) %>
-        <%= link_to('Sign Up', new_user_registration_path) %>
-      <% end %>
-    </nav>
+    <div class='navbar-box'>
+      <nav>
+        <% if user_signed_in? %>
+          <ul>        
+            <li><%= link_to('Browse', categories_path) %> </li>
+            <li><%= link_to('View All', items_path) %> </li>
+            <li><%= link_to('Post New', new_item_path) %> </li>
+            <li><%= link_to('Dashboard', dashboard_path) %> </li>
+            <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %> </li>
+          <% else %>
+            <li><%= link_to('Browse', categories_path) %> </li>
+            <li><%= link_to('View All', items_path) %> </li>
+            <li><%= link_to('Login', new_user_session_path) %> </li>
+            <li><%= link_to('Sign Up', new_user_registration_path) %> </li>
+          <% end %>
+          </ul>
+      </nav>
+    </div>
 
     <%= yield %>
+
+
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/datedropper3@3.0.0/datedropper.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
 
 <script>
 
@@ -52,10 +67,13 @@ $(document).on('turbolinks:load', function() {
     adaptiveHeight: true,
     centerMode: true,
   });
+
+    $('select').niceSelect();
+    $('input.calendar').dateDropper();
+
 });
 
 </script>
-
 
   </body>
 </html>

@@ -5,48 +5,48 @@
 
   <%# Lendr: Add custom field for First Name %>
   <div class="field">
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name", required: true %>
     <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete: "first name" %>
   </div>
 
   <%# Lendr: Add custom field for Last Name %>
   <div class="field">
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name", required: true  %>
     <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true, autocomplete: "last name" %>
   </div>
 
   <%# Lendr: Add custom field for Date of Birth %>
   <div class="field">
+    <%= f.text_field :birthdate, autofocus: true, autocomplete: "date of birth",  :data => {:theme =>'lendr-calendar'}, class: 'calendar',  required: true  %>
     <%= f.label :date_of_birth %> <br />
-    <%= f.date_field :birthdate, autofocus: true, autocomplete: "dae of birth" %>
   </div>
 
   <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true  %>
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <%# Lendr: Add custom field for Phone Number %>
   <div class="field">
+    <%= f.text_field :phone, autofocus: true, autocomplete: "phone", minlength: 10 , maxlength: 20, required: true  %>
     <%= f.label :phone %><br />
-    <%= f.text_field :phone, autofocus: true, autocomplete: "phone", minlength: 10 , maxlength: 20 %>
   </div>
 
   <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", required: true  %>
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true  %>
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+     <p><%= f.button :sign_up, type: :submit %></p>
   </div>
 <% end %>
 

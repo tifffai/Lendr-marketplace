@@ -1,61 +1,65 @@
-<h1>User Dashboard</h1>
+<div>
 
-<% if user_signed_in? %>
+    <h1>User Dashboard</h1>
 
-    <h3>Welcome back, <%= @user.first_name %>!</h3>
+    <% if user_signed_in? %>
 
-    <h4>Account Settings</h4>
-        Name: <%= @user.first_name %> <%= @user.last_name %>
-    <br/>
-        Username: <%= @user.email %>
-    <br/>
-        Update Profile: <%= link_to "Edit", edit_user_registration_path %>
+        <h3>Welcome back, <%= @user.first_name %>!</h3>
 
-    <h4>My Loans (Owner)</h4>
-    <table>
-        <tr>
-            <th>Item Name</th>
-            <th>Item Description</th>
-            <th>Price</th>
-        </tr>
-    <tbody>
-        <% @user.items.each do |item| %>
-        <tr>
-            <td><%= item.name %> </td>
-            <td><%= item.description %> </td>
-            <td><%= item.price %> </td>
-            <td><%= link_to 'Show', item %></td>
-            <% if item.user == current_user %>
-                <td><%= link_to 'Edit', edit_item_path(item) %></td>
-                <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <h4>Account Settings</h4>
+            Name: <%= @user.first_name %> <%= @user.last_name %>
+        <br/>
+            Username: <%= @user.email %>
+        <br/>
+            Update Profile: <%= link_to "Edit", edit_user_registration_path %>
+
+        <h4>My Loans (Owner)</h4>
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Description</th>
+                <th>Price</th>
+            </tr>
+        <tbody>
+            <% @user.items.each do |item| %>
+            <tr>
+                <td><%= item.name %> </td>
+                <td><%= item.description %> </td>
+                <td><%= item.price %> </td>
+                <td><%= link_to 'Show', item %></td>
+                <% if item.user == current_user %>
+                    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+                    <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
             <% end %>
-        <% end %>
-        </tr>
-    </tbody>
-    </table>
+            </tr>
+        </tbody>
+        </table>
 
-    <h4>My Rentals (Buyer)</h4>
+        <h4>My Rentals (Buyer)</h4>
 
-    <table>
-        <tr>
-            <th>Item Name</th>
-            <th>Item Description</th>
-            <th>Price</th>
-        </tr>
-    <tbody>
-        <% @user_transaction.each do |transaction| %>
-        <tr>
-            <td><%= transaction.item.name %> </td>
-            <td><%= transaction.item.description %> </td>
-            <td><%= transaction.item.price %> </td>
-            <td><%= link_to 'Show', transaction %></td>
-            <td><%= link_to 'Edit', edit_item_path(transaction.item) %></td>
-            <td><%= link_to 'Destroy', transaction.item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Description</th>
+                <th>Price</th>
+            </tr>
+        <tbody>
+            <% @user_transaction.each do |transaction| %>
+            <tr>
+                <td><%= transaction.item.name %> </td>
+                <td><%= transaction.item.description %> </td>
+                <td><%= transaction.item.price %> </td>
+                <td><%= link_to 'Show', transaction %></td>
+                <td><%= link_to 'Edit', edit_item_path(transaction.item) %></td>
+                <td><%= link_to 'Destroy', transaction.item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
-        <% end %>
+            <% end %>
 
-        </tr>
-    </tbody>
-    </table>
+            </tr>
+        </tbody>
+        </table>
 
-<% end %>
+    <% end %>
+    
+</div>

@@ -40,11 +40,14 @@
   <%= @transaction.borrower_id %>
 </p>
 
+
 <h2>Add Comment</h2>
 
 <%= form_for Comment.new, url: comments_path do |f| %>
-  <%= f.label :review %>
-  <%= f.text_field :review %>
+  <div class="field">
+    <%= f.text_field :review, required: true %>
+    <%= f.label :review, required: true %>
+  </div>
  <p>
   <%= f.label :rating %>
     <span class="rating">
@@ -67,5 +70,6 @@
  </p> 
  
   <%= f.hidden_field(:item_id, value: @transaction.item.id) %>
-  <p><%= f.submit "Create" %></p>
+  <p><%= f.button :submit, type: :submit %></p>
+
 <% end %>

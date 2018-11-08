@@ -1,24 +1,23 @@
-<div class="category-show-page">
+<div class='grid-browse-page'>
 
-    <h1>What are you looking for today?</h1>
-
-    <br/>
-
-    <%= form_tag("/items", method: "get") do %>
-        <%= label_tag(:search, "Search for:") %>
-        <%= text_field_tag(:search) %>
-        <%= submit_tag("Search") %>
-    <% end %>
-
-    <div class="categories-container">
-
-    <% @categories.each do |category| %>
-        <div class="category-card">
-            <%= link_to ( image_tag "#{category.name.downcase}.svg"), category %>
-            <h3 class="category-title"><%= link_to category.name, category %></h3>
+    <div class='browse-search'>
+        <%= form_tag("/items", method: "get") do %>
+        <div class='field'>
+            <input type="text" name="search" required size="60", >
+            <%= label_tag(:search, "What are we looking for today?") %>
         </div>
-    <% end %>
-
+        <%= submit_tag("Search", class: "search-btn") %>
+        <% end %>
     </div>
+
+    <div class="browse-category-grid">
+        <% @categories.each do |category| %>
+            <div class="style-<%= "#{category.name.downcase}" %>">
+                <%= link_to (image_tag "#{category.name.downcase}.svg", size: "30"), category, :alt => "#{category.name}"%>
+                <p class="category-title"><%= link_to category.name.upcase, category %></p>
+            </div>
+        <% end %>
+    </div>
+
 
 </div>

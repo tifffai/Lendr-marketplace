@@ -2,8 +2,8 @@
 
 <h1>Items</h1>
 
-<table>
-  <thead>
+<table class="index-table">
+  <thead class="index-table-head">
     <tr>
       <th>Name</th>
       <th>Category</th>
@@ -19,7 +19,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="index-table-body">
     <% @items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
