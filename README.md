@@ -1,4 +1,4 @@
-# LENDR
+# LENDR.
 ## Help others, help yourself.
 ### https://tranquil-reaches-18328.herokuapp.com/
 ## About Lendr
@@ -24,10 +24,10 @@ Help others, help yourself. Win-win.
 | Linda Lai | Mat Watts | Tiffany Fai |
 
 ## Contents
-https://github.com/thlorenz/doctoc
-- **[Challenge](#Challenge)**
-- **[Problem](#Problem)**
-- **[Solution](#Solution)**
+- **[Concept](#Concept)**
+    - **[Challenge](#Challenge)**
+    - **[Problem](#Problem)**
+    - **[Solution](#Solution)**
 - **[Application](#Application)**
     - **[Network Infrastructure](#Network-Infrastructure)**
     - **[Software](#Software)**
@@ -59,7 +59,8 @@ https://github.com/thlorenz/doctoc
     - **[The Pitch](#The-Pitch)**
 - **[Conclusion](#Conclusion)**
 
-## <a id="Challenge"></a>Challenge
+## <a id="Concept"></a>Concept
+### <a id="Challenge"></a>Challenge
 *What is the need (i.e. challenge) that you will be addressing in your project?*
 
 In a bygone era of conspicuous consumption, we were conditioned to believe that a need to use something had to mean ownership or accumulation - rather than the reality: _access_.
@@ -72,8 +73,9 @@ Following on from the old adage of borrowing a cup of sugar from your next door 
 
 As a counterargument to the constant bombardment of nudges to buy, own, collect and (let's be honest) discard stuff that does a great job gathering dust on your shelf, languishing in your garage, piling up landfill or used once, Lendr taps into the current milieu to share rather than own, while empowering you to put your goods to work.
 
-## <a id="Problem"></a>Problem
+### <a id="Problem"></a>Problem
 *Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?*
+
 Though access and connectivity to people and things has never been greater, simultaneously we're time-poor, distracted, our wallet needs to stretch just a bit further and the planet is choking from cheaply-made, mass-produced items. 
 
 While in the past things were built to last and updated based on needs rather than wants, today we have been conditioned to go for the new shiny thing and to discard older but perfectly functional belongings - things that are of little or no immediate use to us but with a lot of shelf life left in it.
@@ -86,7 +88,7 @@ By empowering users to act as owners and borrowers on Lendr, we allow people to 
 
 Why?
 
-_Side Hustle, yo!_ We all have stuff that can be converted to cold, hard cash. By renting our your belongings through Lendr, you make your stuff work for you, and save yourself the time, space and dollars required to make room for things you don't need.
+_Side Hustle, yo!_ We all have stuff that can be converted to cold, hard cash. By renting our your belongings through Lendr, you make your stuff work for you, and save yourself the time, space and dollars required to make room for things you don't need or use regularly.
 
 _Encourage a more circular and sharing economy_.
 Instead of the usual vicious make, use, dispose cycle, keep your specialised and niche items in use for as long as possible. Extract the maximum value from your belongings by keeping them available but out of sight until you need it again.
@@ -99,8 +101,9 @@ Call it minimalist, zero-waste or common sense living - let go of all the unnece
 
 _Community_. Make useful connections with people close by and find what you need, quickly, locally and efficiently. Instead of helping the big end of town, find someone you like and trust to give your hard earned dollars over to.
 
-## <a id="Solution"></a>Solution
+### <a id="Solution"></a>Solution
 _Describe the project will you be conducting and how your App will address the needs._
+
 As a community-orientated two-sided marketplace, Lendr lets you help others, help yourself and help the environment by eliminating the need for ownership and making your stuff work for you instead of the other way around. 
 
 Our vision is to provide a fairer, lower-carbon, more transparent, participatory and socially-connected form of economy by encouraging peer-to-peer transactions/interactions in a secure and single meeting place. Through these transactions and interaction, Lendr users (acting as owners and/or lenders) can not only provide ample feedback reciprocally but also provide and/or find competitive prices compared to traditional sellers or renters for specialised or niche items.
@@ -108,6 +111,7 @@ Our vision is to provide a fairer, lower-carbon, more transparent, participatory
 A community-oriented two-sided marketplace creates an atmosphere of expertise and enthusiasm among comic culture buyers and hobbyists. It will not only provide ample feedback to sellers, but it will also incorporate better prices for buyers as they are guided by a specialised community.
 
 The process is simple:
+
 1. _Find._
 Search for what you need, for a specific item or general category.
 
@@ -122,7 +126,7 @@ Return the item to the lender per the agreed terms and timeframe, and leave them
 
 ## <a id="Application"></a>Application
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
-_Describe the network infrastructure the App may be based on._
+**Describe the network infrastructure the App may be based on.**
 
 * Research into how we understand the hosting infrastructure
 * Heroku - host on one machine.
@@ -130,7 +134,8 @@ _Describe the network infrastructure the App may be based on._
 * Scalability (servers to manage requests), redundancies (if something fails)
 
 ### <a id="Software"></a>Software
-_Identify and describe the software to be used in your App._
+**Identify and describe the software to be used in your App.**
+
 Describe the tech stack used for the application
 * Ruby on Rails - framework.
 * Ruby - programming language.
@@ -138,53 +143,53 @@ Describe the tech stack used for the application
 * HTML - semantic.
 
 ### <a id="Architecture"></a>Architecture
-_Describe the architecture of your App._
+**Describe the architecture of your App.**
 
 * Is this describing MVC in relation to our map? i.e. the MVC model diagram Matt drew?
 * Yes go into detail about MVC, don’t describe any model associations yet
 
 ### <a id="Components"></a>Components
 _Explain the different high-level components (abstractions) in your App._
-The abstraction principles applied to object-oriented programming languages and frameworks like Ruby and Rails aim to minimise duplication of information within a program by making common functionalities modulear through abstractions or software libraries.
+The abstraction principles applied to object-oriented programming languages and frameworks like Ruby and Rails aim to minimise duplication of information within a program by making common functionalities modular through abstractions or software libraries.
 
 Doing so means that code is more efficient and DRY (generalised as the 'Don't Repeat Yourself' principle), developers can work more efficiently (by not having to code common functions from scratch or repetitively), thereby reducing redundancies overall. With Rails, there are a numerous abstractions where functions 'automagically' happen, ultimately creating efficiencies in the long run but a steeper learning curve for beginners (to put it mildly).
 
 Instances of different high-level components (abstractions) used in our project include:
-* Using Ruby Gems like Devise, Pundit, Stripe and AWS to easily download, install and use libraries with a specfic piece of functionality and assets and files related to functionality.
+* Using Ruby Gems like Devise, Pundit, Stripe and AWS to easily download, install and use libraries with a specific piece of functionality and assets and files related to functionality.
 * As the model component in the Model-View-Controller architecture of Rails, the ActiveRecord module is a form of database extraction, building into the Rails framework a database adapter to connect to SQLite, MySQL and PostgreSQL, so that it isn't dependent upon any one database, and can be invoked as needed. 
 
 ### <a id="Third-Party-Services"></a>Third Party Services
-_Detail any third party services that your App will use._
+**Detail any third party services that your App will use.**
 * APIs?
 * Heroku?
 * AWS?
 
 ### <a id="Database"></a>Database
 #### <a id="Database-Justification"></a>Database Justification
-_Identify the database to be used in your App and provide a justification for your choice._
+**Identify the database to be used in your App and provide a justification for your choice.**
 * Why we use Postgres instead of SQLite (because SQLite can only do one thing at a time)
 * Full excellent discussion of database used
 * Pros and Cons of Postgresql over SQLite (more than one thing at a time)
 * How postgres is different to sqlite, justify how postgres is way more powerful and how it fits really nicely into rails.
 
 #### <a id="Production-Database"></a>Production Database
-_Identify and describe the production database setup (i.e. postgres instance)._
+**Identify and describe the production database setup (i.e. postgres instance).**
 * Database being setup on Heroku and Postgres (Postgres provided a development version and a production version)
 * Here I would talk about the specifics of postgres, how it connects to your models, how it sits in overall MVC
 
 #### <a id="Market-Research"></a>Market Research
-_Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb)._
+**Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).**
 * Market research: Things version of Airbnb, similar rental model (difference: for objects not accommodation)
 * Ziilch (difference: users are giving away items for free)
 * Gumtree, eBay (difference: users are buying/seller goods for ownership not rental)
 * Fashion Rentals/Rent Furniture, etc. (difference: companies own inventory)
 
 #### <a id="Database-Relations"></a>Database Relations
-_Discuss the database relations to be implemented._
+**Discuss the database relations to be implemented.**
 * ERD - describe model associations and why.
 * This is more regarding why we need a join table in certain instances in your app, why we need a foreign keys in different tables, think about the stuff we did when we first started sql
 
-_Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other._
+**Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other.**
 * Associations - e.g. has many, has one, etc???
 * Think about rails active record associations, has_many, has_one, belongs_to
 
@@ -196,8 +201,12 @@ Our database schema design is represented in the ERD below showing the major ent
 ![ERD](/app/assets/readme/lendr-erd.png)
 
 ## <a id="Project-Management"></a>Project Management
+Throughout the course of the project we used whiteboarding sessions to brainstorm ideas for the initial concept (marketplace, branding, name, etc.), UX/UI and coding logic.
+
 ### <a id="Inspiration"></a>Inspiration
 As a starting point for inspiration for Lendr, we created a collaborative Pinterest board to find design influences and ideas for general UX/UI, colour schemes, typography, and looking at other two-sided marketplaces applications for both desktop and mobile.
+
+Opting to go for a sleek and minimalist design, we ultimately chose to go with a monochromatic colour palette to keep the design classic, and complementary sans-serif monts (Muli and Lato) to keep it readable with the added advantage of it being extremely accessible and high-contrast. 
 
 ![Pinterest](/app/assets/readme/lendr-pinterest.png)
 
@@ -211,7 +220,8 @@ User stories were written from the perspective of the Lendr end user to guide th
 ![Trello User Stories](/app/assets/readme/lendr-trello-user-stories.png)
 
 ### <a id="Wireframes"></a>Wireframes
-**Provide Wireframes for your App.**
+_Provide Wireframes for your App._
+
 After brainstorming the main concept for platform features, basic low-fi wireframes were created using Balsamiq to play around with UX/UI elements, allowing us to easily tweak and visualise our ideas:
 
 ![Balsamiq Wireframes](/app/assets/readme/lendr-wireframes-balsamiq.png)
@@ -251,18 +261,20 @@ The following methodologies were used:
 
 ### <a id="Source-Control"></a>Coding & Source Control
 _Provide an overview and description of your Source control process._
+
 GitHub was used to manage version-control of the source code amongst multiple collaborators. We elected to follow industry practice and have only one team member manage pull requests and merge conflicts rather than have all team members able to push updates to the source directly. Given our relative inexperience with using Git, we felt this was less risky and better practice for how this would be used in a professional setting.
 
 Throughout the coding process, we tried to remember to commit early and often, use branches and leave detailed comment, with varying levels of success). Being our first times using GitHub collaboratively, overall we felt the source control process was managed well without any major conflicts or errors, allowing us to grow slightly more comfortable with this type of workflow.
 
 ### <a id="Deployment"></a>Deployment
-After deploying to Heroku after the first few days, we encountered a number of errors to be resolved. Faced with some unexpected setbacks in relation to the source code, we priortisied resolving these locally first and debugging deployment errors after. This was exascerbated by the relatively brief and non-specific error messages available in the Heroku dashboard and logs in Terminal.
+After deploying to Heroku for the first time, we encountered a number of errors to be resolved. Faced with some unexpected setbacks in relation to the source code, we prioritised resolving these locally first and debugging deployment errors afterwards. This was exacerbated by the relatively brief and non-specific error messages available in the Heroku dashboard and logs in Terminal.
 
 Once our source code was more stable and CSS styling became more of a focus, the next deployment to Heroku was relatively successful and stable - the most challenging aspect of resolving these involved database errors, requiring us to edit, drop, reset and seed a number of tables. After some experimentation, we were able to successfully deploy our completed version to Heroku.
 
 ## <a id="Testing-and-Information-Security"></a>Testing and Information Security
 ### <a id="Testing"></a>Testing
 _Provide an overview and description of your Testing process._
+
 Being new to test-driven development (TDD) and RSpec, our testing process involved User Acceptance Testing (UAT), where our software was tested in the "real world" by the intended audience - by kindly asking (bribing) fellow students, friends and family to use the platform and to check overall functionality (adding, editing deleting and viewing items and categories), authentication, authorisation, Stripe payments and Mailer.
 
 Understanding when, how and what to test proved to be the most challenging part. Given more time and familarity with TDD and RSpec, we would have liked to have more practice writing tests and delivering the main benefits of:
@@ -271,27 +283,26 @@ Understanding when, how and what to test proved to be the most challenging part.
 * Acting as a client for the application code, to influence its design and interface with other parts of the system.
 
 ### <a id="Information-Security-Requirements"></a>Information Security Requirements
-_Discuss and analyse requirements related to information system security._
-    * Payment Security?
-    * Customer Data Protection?
-    * Disputes - Reviews/Comments
-    * Lost/Damaged Items
+**Discuss and analyse requirements related to information system security.**
+
+* Payment Security?
+* Customer Data Protection?
+* Disputes - Reviews/Comments
+* Lost/Damaged Items
 
 Make this a more general analysis of the ethics behind handling user data.
 
 ### <a id="Information-Security-Methodologies"></a>Information Security Methodologies
-_Discuss methods you will use to protect information and data._
-    * Encryption - hashing passwords automatically.
-    * Stripe - what manages and protects all credit card information
-    * Pundit - controls authorisations and what users can see.
-    * Timeouts - automatically logging users out after a period of inactivity??
+**Discuss methods you will use to protect information and data.**
+* Encryption - hashing passwords automatically.
+* Stripe - what manages and protects all credit card information.
+* Pundit - controls authorisations and what users can see.
+* Timeouts - automatically logging users out after a period of inactivity??
+
 https://www.oaic.gov.au/agencies-and-organisations/guides/guide-to-securing-personal-information
-    * Encryption - hashing passwords automatically
-    * Stripe - what manages and protects all credit card information
-    * Pundit - controls authorisations and what users can see
 
 ### <a id="User-Data-Management"></a>User Data Management
-_Research what your legal obligations are in relation to handling user data._
+**Research what your legal obligations are in relation to handling user data.**
 * Cookies - disclaimers for use of cookies to track user data.
 * Privacy - using customer data for data analytics, marketing purposes.
 https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/businesses/
@@ -302,17 +313,16 @@ https://www.oaic.gov.au/agencies-and-organisations/faqs-for-agencies-orgs/busine
 ### <a id="Challenges"></a>Challenges
 Throughout the project, we encountered some challenges and setbacks which required debugging, rolling back to previous versions, scrapping or using an alternative workaround, including:
 
-* _1_:
-
-* Carousel: simple to implement w/o bootstrap.
-* Associations - visible in view, connecting comments to users, transactions (form), displayed under item.
-* Mailgun - odd errors with fetch.
-* GitHub - flow was difficult.
-* Heroku errors - finicky.
-* CSS - transalating/merging usual HTML and Ruby syntax into CSS.
-* Balancing between MVP and limited time frame - pull back and strip back to beta version, proof of function/concept.
+* _Associations_: creating the correct model associations so they could be called upon and visible in different view pages - connecting comments (reviews) to specific users, linking users to transactions, displaying transaction comments under each item with the correct authorisation (i.e. only owners and borrowers who have participated in a transaction can create a comment, this commment will then be visible to all users).
+* _Time Management_: due to the two-week timeframe and unforseen setbacks, this meant rapidly scaling the design and functionality up and down to the most polished version of an MVP/beta that could act as proof of concept.
+* _GitHub_: using GitHub collaboratively with branches and different workflows proved to be quite tricky and nerve-wracking, generating merge conflicts that needed to be resolved or versions that needed to be rolled back.
+* _HTML/CSS_: merging usual HTML and CSS syntax with embedded Ruby (erb) made styling even more time-consumung than usual. 
+* _Mailgun_: resolving odd errors with fetch.
+* _Heroku_: resolving Heroku errors involved debugging following a errors checklist and using Heroku's maddeningly inspecific logs to resolve, also needed to edit, drop, reset and seed a number of tables.
+* _Carousel & Multiple Images_: trying to get a carousel and multiple image upload that was compatible proved to be time-consuming, requiring some trial and error with Bootstrap and JavaScript to make work.
 
 ### <a id="Future-Enhancements"></a>Future Enhancements
+Wh
 * Make the code DRY
 * Geocoder: Maps
 * Scheduler: Book in Advance
