@@ -136,9 +136,6 @@ body a:hover {
 
 /* Table Styling
 --------------------------------------------- */
-table {
-    text-align: center;
-}
 
 th {
     background-color: #f5f5f5;
@@ -197,17 +194,6 @@ body.pages.welcome a:hover {
         width: 180px;
     }
 
-}
-
-
- /* --- CSS Styling for Users#Login page 
---------------------------------------------- */
- body.devise.registrations {
-    background-image: image-url('brunel-johnson-1073779-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    color:  red;
 }
 
 
@@ -306,6 +292,10 @@ body.categories.index .browse-search .search-btn, body.categories.show .browse-s
  /* --- CSS Styling for Item#Index page 
  --------------------------------------------- */
 
+ body.items.index {
+    width: 80vw;
+    margin: 0 auto;
+ }
 
 
  /* --- CSS Styling for Item#Show page 
