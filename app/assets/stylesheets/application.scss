@@ -49,24 +49,20 @@ p {
 }
 
 .home-logo-box {
-    // float: left;
     padding-left: 5%;
     position: fixed;
 }
 
 .main-header {
     display: flex; 
-    // background: dodgerblue;
     justify-content: space-between;
 }
 
 nav {
     display: flex;
     justify-content: space-evenly;
-    // background: dodgerblue;
     min-width: 70vw;
     align-items: center;
-
 }
 
 
@@ -85,8 +81,50 @@ a:hover {
 
 .navbar-logo-box {
     display: flex;
+}
+
+.navbar-mobile-box {
+    display: flex;
+    align-self: flex-end;
     justify-content: flex-start;
+}
+
+.navbar-mobile {
+    width: 100vw;
+    height: 50px;
+    color: #000;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    // align-self: flex-end;
+    // visibility: hidden;
+}
+
+.navbar-mobile:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.inpage-btn-box {
+    // height: 50px;
+    // width: 100px;
+    // border: 1px solid white;
+    // display: flex;
+    // justify-content: center;
     
+}
+
+.inpage-btn-box:hover {
+    // height: 50px;
+    // width: 100px;
+    // border: 1px solid #fff;
+    // background-color: #fff;
+    // color: #000;
+    // text-align: center;
 }
 
 
@@ -105,6 +143,10 @@ a:hover {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 0.5fr repeat(9, 1fr) 0.5fr;
 }
+
+/* Table Styling
+--------------------------------------------- */
+
 
 
 
@@ -180,7 +222,7 @@ body.categories.index .browse-search {
     line-height: 1em;
 }
 
-body.categories.index .browse-search .search-btn {
+body.categories.index .browse-search .search-btn, body.categories.show .browse-search .search-btn {
     font-family: 'Lato', sans-serif;
     font-size: 8px;
     text-transform: uppercase;

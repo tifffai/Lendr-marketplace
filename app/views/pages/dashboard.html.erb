@@ -1,31 +1,40 @@
 <div>
 
-    <h1>User Dashboard</h1>
+    <h1>DASHBOARD</h1>
+
+    <br><br>
 
     <% if user_signed_in? %>
 
         <h3>Welcome back, <%= @user.first_name %>!</h3>
 
-        <h4>Account Settings</h4>
+        <h4>ACCOUNT SETTINGS</h4>
             Name: <%= @user.first_name %> <%= @user.last_name %>
         <br/>
             Username: <%= @user.email %>
         <br/>
             Update Profile: <%= link_to "Edit", edit_user_registration_path %>
 
-        <h4>My Loans (Owner)</h4>
+
+        <br><br>
+
+        <h3>MY FOR RENT LISTINGS</h3>
         <table>
             <tr>
                 <th>Item Name</th>
                 <th>Item Description</th>
                 <th>Price</th>
+                <th>Suburb</th>
+                <th>Preview</th>
             </tr>
         <tbody>
             <% @user.items.each do |item| %>
             <tr>
                 <td><%= item.name %> </td>
                 <td><%= item.description %> </td>
-                <td><%= item.price %> </td>
+                <td><%= number_to_currency(item.price/100.0) %></td>
+                <td><%= item.suburb %></td>
+                <td><%= image_tag item.images.first, height: '80'%></td>
                 <td><%= link_to 'Show', item %></td>
                 <% if item.user == current_user %>
                     <td><%= link_to 'Edit', edit_item_path(item) %></td>
@@ -36,7 +45,9 @@
         </tbody>
         </table>
 
-        <h4>My Rentals (Buyer)</h4>
+        <br><br>
+
+        <h3>ITEMS RENTED IN THE PAST</h3>
 
         <table>
             <tr>

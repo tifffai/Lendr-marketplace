@@ -5,20 +5,19 @@
       </div>
     <% end %>
 
-      <nav class="navbar-box">
-        <% if user_signed_in? %>
-                 
-            <%= link_to('Browse', categories_path) %> 
-            <%= link_to('View All', items_path) %> 
-            <%= link_to('Post New', new_item_path) %> 
-            <%= link_to('Dashboard', dashboard_path) %> 
-            <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
-          <% else %>
-            <%= link_to('Browse', categories_path) %> 
-            <%= link_to('View All', items_path) %> 
-            <%= link_to('Login', new_user_session_path) %> 
-            <%= link_to('Sign Up', new_user_registration_path) %> 
-          <% end %>
+    <nav class="navbar-box">
+      <% if user_signed_in? %>  
+        <%= link_to('Browse', categories_path) %> 
+        <%= link_to('View All', items_path) %> 
+        <%= link_to('Post New', new_item_path) %> 
+        <%= link_to('Dashboard', dashboard_path) %> 
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
+      <% else %>
+        <%= link_to('Browse', categories_path) %> 
+        <%= link_to('View All', items_path) %> 
+        <%= link_to('Login', new_user_session_path) %> 
+        <%= link_to('Sign Up', new_user_registration_path) %> 
+      <% end %>
           
       </nav>
 </header>

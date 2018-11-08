@@ -1,17 +1,18 @@
-<h1>Categories#show</h1>
+<h1><%= @category.name.upcase %></h1>
 
-<p>
-  <strong>Category:</strong>
-  <%= @category.name %>
-</p>
+<br><br><br>
 
-<%= form_tag("/items", method: "get") do %>
-  <%= label_tag(:search, "Search for:") %>
-  <%= text_field_tag(:search) %>
-  <%= submit_tag("Search") %>
-<% end %>
+    <div class='browse-search'>
+        <%= form_tag("/items", method: "get") do %>
+        <div class='field'>
+            <input type="text" name="search" required size="60", >
+            <%= label_tag(:search, "What are we looking for today?") %>
+        </div>
+        <%= submit_tag("Search", class: "search-btn") %>
+        <% end %>
+    </div>
 
-<h1>Items</h1>
+<h2>ITEMS.</h2>
 
 <table>
   <thead>
