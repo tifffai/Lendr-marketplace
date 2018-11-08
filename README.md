@@ -7,7 +7,7 @@ Lendr is a community-driven two-sided marketplace that lets you rent out your be
 Help others, help yourself. Win-win.
 
 ### Lendr Features
-* _Lend and Borrow Items_: Users can lend and and borrow belongings from other users nearby, setting their own daily rate, terms and conditions from a listing hosted on Lendr.
+* _Lend and Borrow Items_: sers can lend and and borrow belongings from other users nearby, setting their own daily rate, terms and conditions from a listing hosted on Lendr.
 * _Reviews_: Users acting as owners or borrowers in a transaction can mutually provide reviews to keep the Lendr community aware of good actors, and to encourage users to be good actors.
 * _Search_: Item search by keywords to ease the difficulty of browsing and finding items.
 * _Filter_: General search by category so users can search by category for a specific event or use case scenario.
@@ -76,9 +76,7 @@ As a counterargument to the constant bombardment of nudges to buy, own, collect 
 ### <a id="Problem"></a>Problem
 *Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?*
 
-Though access and connectivity to people and things has never been greater, simultaneously we're time-poor, distracted, our wallet needs to stretch just a bit further and the planet is choking from cheaply-made, mass-produced items. 
-
-While in the past things were built to last and updated based on needs rather than wants, today we have been conditioned to go for the new shiny thing and to discard older but perfectly functional belongings - things that are of little or no immediate use to us but with a lot of shelf life left in it.
+Though access and connectivity to people and things has never been greater, simultaneously we're time-poor, distracted, our wallet needs to stretch just a bit further and the planet is choking from cheaply-made, mass-produced items. While in the past things were built to last and updated based on needs rather than wants, today we have been conditioned to go for the new shiny thing and to discard older but perfectly functional belongings - things that are of little or no immediate use to us but with a lot of shelf life left in it.
 
 Instead of scouring through shops and having to buy/resell niche items after use or chasing vendors for specialised rentals, we envision a one-stop meeting place that allows you to get to the good stuff, get it quickly and get it done - on your terms.
 
@@ -92,8 +90,6 @@ _Describe the project will you be conducting and how your App will address the n
 As a community-orientated two-sided marketplace, Lendr lets you help others, help yourself and help the environment by eliminating the need for ownership and making your stuff work for you instead of the other way around. 
 
 Our vision is to provide a fairer, lower-carbon, more transparent, participatory and socially-connected form of economy by encouraging peer-to-peer transactions/interactions in a secure and single meeting place. Through these transactions and interaction, Lendr users (acting as owners and/or lenders) can not only provide ample feedback reciprocally but also provide and/or find competitive prices compared to traditional sellers or renters for specialised or niche items.
-
-A community-oriented two-sided marketplace creates an atmosphere of expertise and enthusiasm among comic culture buyers and hobbyists. It will not only provide ample feedback to sellers, but it will also incorporate better prices for buyers as they are guided by a specialised community.
 
 The process is simple:
 
@@ -130,28 +126,28 @@ The current network infrastructure for Lendr was chosen based on what was most s
 
 If the architecture of our server system did need to be scaled due to a dramatic increase in the number of requests coming through, there would be a few options:
 
-* _Vertical Scaling_: by giving our server computer more computing power (such as adding more RAM or upgrading the server's processor), however this would only render a positive effect in the initial stage - if our traffic increased again, we would eventually arrive at a point when making further computing upgrades vertically would be technically impossible.
+* _Vertical Scaling_: By giving our server  more computing power (such as adding more RAM or upgrading the server's processor), however this would only render a positive effect in the initial stage - if our traffic increased again, we would eventually arrive at a point when making further computing upgrades vertically would be technically impossible.
 
-* _Horizontal Scaling_: by converting the single server architecture of our application into multiple-tiers, where the server and load balancer (Ngix), Rails app instances and database instances are located on different servers, allowung us to allocate equal and smaller loads amongst machines.
+* _Horizontal Scaling_: By converting the single server architecture of our application into multiple-tiers, where the server and load balancer, Rails app instances and database instances are located on different servers, allowing us to allocate equal and smaller loads amongst machines.
 
 ### <a id="Software"></a>Software
 _Identify and describe the software to be used in your App._
-The software used in our application included the following tech stacks and frameworks:
 
-* _Ruby_: a dynamic, object-orientated general purpose programming language.
-* _Ruby on Rails_: a web application framework that provides default structures for a database, a web service, and web pages.
-* _HTML_: the standard semantic markup language for all web pages and web applicatons.
-* _CSS_: the style sheet language used to specify the presentation of web pages and web applications written in markup languages like HTML such as layouts, colours and fonts.
+The software used in our application included the following tech stacks and frameworks:
+* _Ruby_: A dynamic, object-orientated general purpose programming language.
+* _Ruby on Rails_: A web application framework that provides default structures for a database, a web service, and web pages.
+* _HTML_: The standard semantic markup language for all web pages and web applications.
+* _CSS_: The style sheet language used to specify the presentation of web pages and web applications written in markup languages like HTML such as layouts, colours and fonts.
 
 ### <a id="Architecture"></a>Architecture
 _Describe the architecture of your App._
 
-The architecture of our Ruby on Rails application adheres to the model-view-controller pattern for developing user interfaces by separating out the application logic into three parts:
-* _Model_: defines data structures and what data the application should store.
-* _View_: defines the display (user interface).
-* _Controller_: contains the control logic that updates the model and/or view in response to input from users.
+The architecture of our Ruby on Rails application adheres to the Model-View-Controller pattern for developing user interfaces by separating out concerns and the application logic into three parts:
+* _Model_: Defines data structures and what data the application should store.
+* _View_: Defines the display (user interface).
+* _Controller_: Contains the control logic that updates the model and/or view in response to input from users.
 
-The MVC architecture allows for efficiencies by promoting modularity and avoiding repetitive code.
+The Model-View-Controller architecture allows for efficiencies by promoting modularity and avoiding repetitive code.
 
 ### <a id="Components"></a>Components
 _Explain the different high-level components (abstractions) in your App._
@@ -162,14 +158,14 @@ Doing so means that code is more efficient and DRY (generalised as the 'Don't Re
 
 Instances of different high-level components (abstractions) used in our project include:
 * Using Ruby Gems like Devise, Pundit, Stripe and AWS to easily download, install and use libraries with a specific piece of functionality and assets and files related to functionality.
-* As the model component in the Model-View-Controller architecture of Rails, the ActiveRecord module is a form of database extraction, building into the Rails framework a database adapter to connect to SQLite, MySQL and PostgreSQL, so that it isn't dependent upon any one database, and can be invoked as needed. 
+* As the model component in the Model-View-Controller architecture of Rails, the Active Record module is a form of database extraction, building into the Rails framework a database adapter to connect to SQLite, MySQL and PostgreSQL, so that it isn't dependent upon any one database, and can be invoked as needed. 
 
 ### <a id="Third-Party-Services"></a>Third Party Services
 _Detail any third party services that your App will use._
 
-Currently, Lendr is hosted through _Heroku_, a platform as a service (PaaS). Using Heroku provided us with a managed solution so that we didn’t have to concern ourselves with infrastructure headaches such as configuring hardware and setting up localised servers, and were able to focus on coding and development. By shipping all computing services through Heroku bundles (dynoms), we did not have to separately launch hard drives and virtual instances - everything required for our Rails application was provided by default. The benefit of using Heroku is that it is optimised for quick and efficient deployment of Rails (suitable for our MVP) however if did want to scale this further, there are more limited options for configuration compared to other hosting services and service charges tend to rise dramatically if traffic to our site increased exponentially. 
+Currently, Lendr is hosted through Heroku, a platform as a service (PaaS). Using Heroku provided us with a managed solution so that we didn’t have to concern ourselves with infrastructure headaches such as configuring hardware and setting up localised servers, and were able to focus on coding and development. By shipping all computing services through Heroku bundles (dynoms), we did not have to separately launch hard drives and virtual instances - everything required for our Rails application was provided by default. The benefit of using Heroku is that it is optimised for quick and efficient deployment of Rails (suitable for our MVP) however if did want to scale this further, there are more limited options for configuration compared to other hosting services and service charges tend to rise dramatically if traffic to our site increased exponentially. 
  
-To collect and storage image uploads from users for item listings on Lendr, we used _S3_ cloud infrastructure provided by Amazon Web Services, the world's largest cloud infrastructure/storage service that has been designed for durability, security and compliance. For our MVP, this allowed us to take advantage of their most affordable hosting services and a very stable and scalable platform to manage redundancies (in the event that something was to fail).
+To collect and storage image uploads from users for item listings on Lendr, we used S3 cloud infrastructure provided by Amazon Web Services, the world's largest cloud infrastructure/storage service that has been designed for durability, security and compliance. For our MVP, this allowed us to take advantage of their most affordable hosting services and a very stable and scalable platform to manage redundancies (in the event that something was to fail).
 
 ### <a id="Database"></a>Database
 #### <a id="Database-Justification"></a>Database Justification
@@ -186,7 +182,7 @@ The main benefits of using PostgreSQL are:
 
 #### <a id="Production-Database"></a>Production Database
 _Identify and describe the production database setup (i.e. postgres instance)._
-As Rails uses the MVC architectural pattern to populate our application with database data, the database is represented as an abstraction of SQL through the model (which defines data structures and what data the application should store).
+As Rails uses the Model-View-Controller architectural pattern to populate our application with database data, the database is represented as an abstraction of SQL through the model (which defines data structures and what data the application should store).
 
 As a database agnostic framework capable of being used with a variety of different databases, we opted to use PostgreSQL for our Rails application as it provides both a development version and a production version that can be managed through the ```database.yml``` file. 
 
@@ -196,26 +192,24 @@ Having different databases for development (hosted locally on our computers) and
 _Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb)._
 
 Similar two-sided marketplaces and sharing economy platforms are currently in operation, and would share some similar data structures such as models (SQL tables) for users (in which users can act as both buyers and sellers in an exchange), categories and comments (reviews/ratings), with some key differences:
-* _Airbnb_: instead of a model for items, models for homes, experiences and restaurants.
-* _eBay_: models setup in eBay's database would facilitate the sale of goods rather than the lending of goods.
-* _Gumtree_: no model to record transactions between sellers and buyers as no payments between users are facilitated on the platform, only with Gumtree itself (for promoted listings) as Gumtree's revenue is primarily derived from ads.
-* _Ziilch_: no model to record transactions between users as the platform facilitates interactions where users giveaway or receive items for free.
-* _Rentals_: specialised rental platforms such as Your Closet and Glam Corner would have a users table with only a buyer role (no seller) as the company owns the inventory rather than facilitating a peer-to-peer economy.
+* _Airbnb_: Instead of a model for items, models for homes, experiences and restaurants.
+* _eBay_: Models setup in eBay's database would facilitate the sale of goods rather than the lending of goods.
+* _Gumtree_: No model to record transactions between sellers and buyers as no payments between users are facilitated on the platform, only with Gumtree itself (for promoted listings) as Gumtree's revenue is primarily derived from ads.
+* _Ziilch_: No model to record transactions between users as the platform facilitates interactions where users giveaway or receive items for free.
+* _Rentals_: Specialised rental platforms such as Your Closet and Glam Corner would have a users table with only a buyer role (no seller) as the company owns the inventory rather than facilitating a peer-to-peer economy.
 
 #### <a id="Database-Relations"></a>Database Relations
-**Discuss the database relations to be implemented.**
+_Discuss the database relations to be implemented._
 
-In SQL, database relations describe the way in which tables (represented in Rails as models) are connected. By defining these relationships, we can leverage powerful cross-table queries, either by specifying foreign key pairings (by pairing a unique ID reference from each table to create the relationship) and/or using join tables (tables which combine columns from two separate tables), depending on the type of database relationship.
+In SQL, database relations describe the way in which tables (represented in Rails as models through PostgreSQL) are connected. By defining these relationships, we can leverage powerful cross-table queries, either by specifying foreign key pairings (by pairing a unique ID reference from each table to create the relationship) and/or using join tables (tables which combine columns from two separate tables), depending on the type of database relationship.
 
 There are three main types of database relationships, named according to the number of table rows that may be involved in the relationships:
 
-* _One-to-one relationships_: using a foreign key matched to the primary keyy, occurs when each entry in a table has one, and only one, counterpart in the second table.
-* _One-to-many-relationships_: using a foreign key matched to the primary key, occurs when each record in the first table corresponds to one or more records in another table, but each record in the second table only corresponds to one record in the first.
-* _Many-to-many relationships_: using a join table, occurs when each record in the first table corresponds to one or more records in the second and vice versa.
+* _One-to-one relationships_: Using a foreign key matched to the primary key, occurs when each entry in a table has one, and only one, counterpart in the second table.
+* _One-to-many-relationships_: Using a foreign key matched to the primary key, occurs when each record in the first table corresponds to one or more records in another table, but each record in the second table only corresponds to one record in the first.
+* _Many-to-many relationships_: Using a join table, occurs when each record in the first table corresponds to one or more records in the second and vice versa.
 
 In Rails, these relationships are defined as associations between two Active Record models. By creating these associations, common operations are simpler and easier to code. Rails supports six types of associations:
-
-Rails supports six types of associations:
 ```
 belongs_to
 has_one
@@ -270,12 +264,10 @@ Our database schema design is represented in the ERD below showing the major ent
 ![ERD](/app/assets/readme/lendr-erd.png)
 
 ## <a id="Project-Management"></a>Project Management
-Throughout the course of the project we used whiteboarding sessions to brainstorm ideas for the initial concept (marketplace, branding, name, etc.), UX/UI and coding logic.
-
 ### <a id="Inspiration"></a>Inspiration
 As a starting point for inspiration for Lendr, we created a collaborative Pinterest board to find design influences and ideas for general UX/UI, colour schemes, typography, and looking at other two-sided marketplaces applications for both desktop and mobile.
 
-Opting to go for a sleek and minimalist design, we ultimately chose to go with a monochromatic colour palette to keep the design classic, and complementary sans-serif monts (Muli and Lato) to keep it readable with the added advantage of it being extremely accessible and high-contrast. 
+Opting to go for a sleek and minimalist design, we ultimately chose to go with a monochromatic colour palette to keep the design classic, and complementary sans-serif fonts (Muli and Lato) to keep it readable with the added advantage of it being extremely accessible and high-contrast. 
 
 ![Pinterest](/app/assets/readme/lendr-pinterest.png)
 
@@ -319,14 +311,14 @@ Additionally, the following platforms were used throughout the project to assist
 ### <a id="Agile-Methodologies"></a>Agile Methodologies
 _Discuss how Agile methodology is being implemented in your project._
 
-With a firm eye towards MVP throughout the project, we endeavoured to follow an Agile approach through adaptive planning, iterative development, quick delivery and continual improvement, which enabled us to respond more rapidly and flexibly to change. True enough, throughout the process we were forced to and able to scale our project up and down when faced with setbacks or opportunities to improve what had aleady been set up.
+With a firm eye towards MVP throughout the project, we endeavoured to follow an Agile approach through adaptive planning, iterative development, quick delivery and continual improvement, which enabled us to respond more rapidly and flexibly to change. True enough, throughout the process we were forced to and able to scale our project up and down when faced with setbacks or opportunities to improve what had already been set up.
 
 The following methodologies were used:
-* _Scrum_: After encountering setbacks, Scrum methodologies like daily standups and retrospetives were used to discuss daily prioirities and reflect on the past to tighten up what we could deliver within the two-week timeframe.
-* _User Stories_: creating user stories to conceptualise features and requirements from the perspective of Lendr end-users.
-* _Workflows_: tasks were broken down into TO DO, DOING and DONE workflows
-* _Kanban_: tasks broken down into workflows and features were visualised in cards and columns using Trello.
-* _Paired Programming_: working in pairs or as a group of three, throughout the coding process we would work together at one workstation or use VS LiveShare to alternate between navigating and observing, then switching. This allowed us to pick up on errors and have a safety net.
+* _Scrum_: After encountering setbacks, Scrum methodologies like daily standups and retrospectives were used to discuss daily priorities and reflect on the past to tighten up what we could deliver within the two-week timeframe.
+* _User Stories_: Creating user stories to conceptualise features and requirements from the perspective of Lendr end-users.
+* _Workflows_: Tasks were broken down into TO DO, DOING and DONE workflows.
+* _Kanban_: Tasks broken down into workflows and features were visualised in cards and columns using Trello.
+* _Paired Programming_: Working in pairs or as a group of three, throughout the coding process we would work together at one workstation or use VS LiveShare to alternate between navigating and observing, then switching. This allowed us to pick up on errors and have a safety net.
 
 ### <a id="Source-Control"></a>Coding & Source Control
 _Provide an overview and description of your Source control process._
@@ -344,7 +336,7 @@ Once our source code was more stable and CSS styling became more of a focus, the
 ### <a id="Testing"></a>Testing
 _Provide an overview and description of your Testing process._
 
-Being new to test-driven development (TDD) and RSpec, our testing process involved User Acceptance Testing (UAT), where our software was tested in the "real world" by the intended audience - by kindly asking (bribing) fellow students, friends and family to use the platform and to check overall functionality (adding, editing deleting and viewing items and categories), authentication, authorisation, Stripe payments and Mailer.
+Being new to test-driven development (TDD) and RSpec, our testing process involved User Acceptance Testing (UAT), where our software was tested in the "real world" by the intended audience - by asking fellow students to use the platform and to check overall functionality (adding, editing deleting and viewing items and categories), authentication, authorisation, Stripe payments and Mailer.
 
 Understanding when, how and what to test proved to be the most challenging part. Given more time and familarity with TDD and RSpec, we would have liked to have more practice writing tests and delivering the main benefits of:
 * Protecting against regression, where a functioning feature errors out for some reason;
@@ -353,64 +345,64 @@ Understanding when, how and what to test proved to be the most challenging part.
 
 ### <a id="Information-Security-Requirements"></a>Information Security Requirements
 _Discuss and analyse requirements related to information system security._
-The digital economy is built on data that is being created, collected, combined and shared on a unprecented scale in which traditional governance frameworks, cybersecurity and risk-mitigation strategies are insufficient. In the digital age, analysing and acting on insights from data can produce entirely new types of risk, including:
+The digital economy is built on data that is being created, collected, combined and shared on a unprecedented scale in which traditional governance frameworks, cybersecurity and risk-mitigation strategies are insufficient. In the digital age, analysing and acting on insights from data can produce entirely new types of risk, including:
 * Unethical or illegal use of personal or corporate data
-* Biases that exascerbate issues of social and economic justice, profiling, etc.
+* Biases that exacerbate issues of social and economic justice, profiling, etc.
 * Using data for purposes to which its original disclosers would not have agreed to or without their consent.
 
-While in the past, risk management largely related to cybersecurity, today it captures a broad scope of responsibilites both on users and providers as to the risks involved from insufficient or unethical data practices, such as:
-* Managing and encypting sensitive customer data (such as passwords, financial details, health recods, etc).
+While in the past, risk management largely related to cybersecurity, today it captures a broad scope of responsibilities both on users and providers as to the risks involved from insufficient or unethical data practices, such as:
+* Managing and encrypting sensitive customer data (such as passwords, financial details, health records, etc).
 * The right to privacy and the use of data for research, marketing and tracking.
 * Data breaches and disclosures to regulators and the public.
-* Accessibility and vulnernability of data hosted on platforms using APIs and other third party applications.
+* Accessibility and vulnerability of data hosted on platforms using APIs and other third party applications.
 
 ### <a id="Information-Security-Methodologies"></a>Information Security Methodologies
 _Discuss methods you will use to protect information and data._
 
 For our MVP, the following Ruby gems and methods were used to protect information and data:
-* Devise: provides authentication for hashing and storing user data and adding user registration, log-in and log-out features to our application.
-* Pundit: provides a set of helpers for authorisation to manage user permissions and application policies.
-* Stripe: payments are processed through Stripe (which has the highest grade of payment processing security) so that sensitive financial data (i.e. credit card information) is not stored by Lendr.
-* Validations: implementing form validations requiring minimum number of characters to make passwords more secure and cleaner data.
+* _Devise_: provides authentication for hashing and storing user data and adding user registration, log-in and log-out features to our application.
+* _Pundit_: provides a set of helpers for authorisation to manage user permissions and application policies.
+* _Stripe_: payments are processed through Stripe (which has the highest grade of payment processing security) so that sensitive financial data (i.e. credit card information) is not stored by Lendr.
+* _Validations_: implementing form validations requiring minimum number of characters to make passwords more secure and cleaner data.
 
 
 ### <a id="User-Data-Management"></a>User Data Management
 _Research what your legal obligations are in relation to handling user data._
-As legal obligations in relation to handling user data vary across different countries and regions, it is vital to check the laws and requirements for compliance. Legal obligations to consider in Australia include:
-* _Cookie Policy_: website requirements to get consent from visitors to store or retrieve any information on a computer, smartphone or tablet for tracking purposes.
-* _Privacy Policy_: disclosing the ways in which the a website gathers, uses, discloses and managers a visitor or customer's data and legal requirements to protect a user's privacy.
+As legal obligations in relation to handling user data vary across different countries and jurisdictions, it is vital to check the laws and requirements for compliance. Legal obligations to consider in Australia include:
+* _Cookie Policy_: Website requirements to get consent from visitors to store or retrieve any information on a computer, smartphone or tablet for tracking purposes.
+* _Privacy Policy_: Disclosing the ways in which the a website gathers, uses, discloses and managers a visitor or customer's data and legal requirements to protect a user's privacy.
 * _Legal Notice and Terms_: Outlining the terms on which users may make use of the website and the legal use of copyrighted or proprietary assets and information.
 
 ## <a id="Minimum-Viable-Product"></a>Minimum Viable Product
 ### <a id="Challenges"></a>Challenges
 Throughout the project, we encountered some challenges and setbacks which required debugging, rolling back to previous versions, scrapping or using an alternative workaround, including:
 
-* _Associations_: creating the correct model associations so they could be called upon and visible in different view pages - connecting comments (reviews) to specific users, linking users to transactions, displaying transaction comments under each item with the correct authorisation (i.e. only owners and borrowers who have participated in a transaction can create a comment, this commment will then be visible to all users).
+* _Associations_: Creating the correct model associations so they could be called upon and visible in different view pages - connecting comments (reviews) to specific users, linking users to transactions, displaying transaction comments under each item with the correct authorisation (i.e. only owners and borrowers who have participated in a transaction can create a comment, this comment will then be visible to all users).
 * _Time Management_: due to the two-week timeframe and unforseen setbacks, this meant rapidly scaling the design and functionality up and down to the most polished version of an MVP/beta that could act as proof of concept.
 * _GitHub_: using GitHub collaboratively with branches and different workflows proved to be quite tricky and nerve-wracking, generating merge conflicts that needed to be resolved or versions that needed to be rolled back.
-* _HTML/CSS_: merging usual HTML and CSS syntax with embedded Ruby (erb) made styling even more time-consumung than usual. 
+* _HTML/CSS_: merging usual HTML and CSS syntax with embedded Ruby (erb) made styling even more time-consuming than usual. 
 * _Mailgun_: resolving odd errors with fetch.
-* _Heroku_: resolving Heroku errors involved debugging following a errors checklist and using Heroku's maddeningly inspecific logs to resolve, also needed to edit, drop, reset and seed a number of tables.
+* _Heroku_: resolving Heroku errors involved debugging following a errors checklist and using Heroku's maddeningly vague logs to resolve, also needed to edit, drop, reset and seed a number of tables.
 * _Carousel & Multiple Images_: trying to get a carousel and multiple image upload that was compatible proved to be time-consuming, requiring some trial and error with Bootstrap and JavaScript to make work.
-* _Timeouts_: implement automatic timeouts for transactions and logged in accounts so that abandoned pages do not show potentially sensitive data longer than a standard web session (30 minutes).
 
 ### <a id="Future-Enhancements"></a>Future Enhancements
 Given the opportunity to implement additional functionality, future enhancements would include:
-* _Geocoder_: implementing Geocode gem to extract latitude and longitude coordinated for users to display owners and borrowers nearby for a given item, currently users must hardcode in an address and contact each other directly to organise a pickup time and location per the terms specified in the listing. From there, these coordinates could be used to represent this visually in a map similar to Airbnb.
-* _Scheduler_: implementing ActsAsBookable gem to allow users to book resources by implementing a scheduling function, currently platform only allows for immediate reservations.
-* _Internal Messaging_: implement internal messaging to allow users to communicate to each other privately through Lendr, currently users must contact each other directly via email or mobile outside of the platform.
-* _Shopping Cart_: add shopping cart function that allows users to rent and pay for multiple items in a single transaction.
-* _Bond/Guarantee_: implement function that allows owners to specify a bond or guarantee that is charged to the borrower in the event of lost or damaged items.
-* _Watchlist/Favourites_: add watchlist and favourites list functionality that allows registered users to keep track of favourite or interested items.
-* _Admin Dashboard_: create admin dashboard to visualise and manage user access and data storeed in Active Record models, with full CRUD options.
+* _Geocoder_: Implementing Geocoder gem to extract latitude and longitude coordinated for users to display owners and borrowers nearby for a given item, currently users must hard code in an address and contact each other directly to organise a pickup time and location per the terms specified in the listing. From there, these coordinates could be used to represent this visually in a map similar to Airbnb.
+* _Scheduler_: Implementing ActsAsBookable gem to allow users to book resources by implementing a scheduling function, currently platform only allows for immediate reservations.
+* _Internal Messaging_: Implementing internal messaging system to allow users to communicate to each other privately through Lendr, currently users must contact each other directly via email or mobile outside of the platform.
+* _Shopping Cart_: Add shopping cart function that allows users to rent and pay for multiple items in a single transaction.
+* _Bond/Guarantee_: Implement function that allows owners to specify a bond or guarantee that is charged to the borrower in the event of lost or damaged items.
+* _Watchlist/Favourites_: Add watchlist and favourites list functionality that allows registered users to keep track of favourite or interested items.
+* _Admin Dashboard_: Create admin dashboard to visualise and manage user access and data stored in Active Record models, with full CRUD options.
+* _Timeouts_: Implement automatic timeouts for transactions and logged in accounts so that abandoned pages do not show potentially sensitive data longer than a standard web session (30 minutes).
 
 ### <a id="Ethical-Considerations"></a>Ethical Considerations
 In a real-world use case scenario, the following situations would involve some ethical considerations:
-* _Prohibited Items_: applying specific rule and conditions with respect to allowed and prohibited items for rent such as single use items, living creatures, medical and/or hazardous materials, dangerous goods, weapons, illicit items, adult material, offensive material, stolen property, proprietary items, etc.
-* _Contact Information and Location_: how and where contact information and sensitive user information (such as address/location) is displayed to users.
-* _Malicious Use_: managing situations where innocuous items are used by borrowers maliciously to harass, intimidate or offend.
-* _Dispute Resolution_: devising a fair and robust dispute resolution process for lost, damage or disputed items.
-* _Insurance/Fraud_: how to protect owners and lenders from fraud and/or provide some kind of bond, guanatee or insurance where recompense is required.
+* _Prohibited Items_: Applying specific rule and conditions with respect to allowed and prohibited items for rent such as single use items, living creatures, medical and/or hazardous materials, dangerous goods, weapons, illicit items, adult material, offensive material, stolen property, proprietary items, etc.
+* _Contact Information and Location_: How and where contact information and sensitive user information (such as address/location) is displayed to users.
+* _Malicious Use_: Managing situations where innocuous items are used by borrowers maliciously to harass, intimidate or offend.
+* _Dispute Resolution_: Devising a fair and robust dispute resolution process for lost, damage or disputed items.
+* _Insurance/Fraud_: how to protect owners and lenders from fraud and/or provide some kind of bond, guarantee or insurance where recompense is required.
 
 ### <a id="The-Pitch"></a>The Pitch
 * Attach PowerPoint Presentation
