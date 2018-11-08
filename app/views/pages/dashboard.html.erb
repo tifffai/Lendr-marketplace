@@ -54,13 +54,17 @@
                 <th>Item Name</th>
                 <th>Item Description</th>
                 <th>Price</th>
+                <th>Suburb</th>
+                <th>Preview</th>
             </tr>
         <tbody>
             <% @user_transaction.each do |transaction| %>
             <tr>
                 <td><%= transaction.item.name %> </td>
                 <td><%= transaction.item.description %> </td>
-                <td><%= transaction.item.price %> </td>
+                <td><%= number_to_currency(transaction.item.price/100.0) %> </td>
+                <td><%= transaction.item.suburb %></td>
+                <td><%= image_tag transaction.item.images.first, height: '80'%></td>
                 <td><%= link_to 'Show', transaction %></td>
                 <td><%= link_to 'Edit', edit_item_path(transaction.item) %></td>
                 <td><%= link_to 'Destroy', transaction.item, method: :delete, data: { confirm: 'Are you sure?' } %></td>

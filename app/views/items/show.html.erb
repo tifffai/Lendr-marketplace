@@ -53,32 +53,36 @@
 
 <h2>RENT NOW.</h2>
 
-<% if @item.next_available < Time.now %>
-  <strong>AVAILABLE: This listing is available for rent now!</strong>
+<% if user_signed_in? %> 
+  <% if @item.next_available < Time.now %>
+    <strong>AVAILABLE: This listing is available for rent now!</strong>
 
-  <br><br>
+    <br><br>
 
-    <%= form_tag charges_path do %>
-      <article>
-        <% if flash[:error].present? %>
-          <div id="error_explanation">
-            <p><%= flash[:error] %></p>
-          </div>
-        <% end %>
-      </article>
-      <%= hidden_field_tag(:item_id, @item.id) %>
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="<%= @item.name %>"
-              data-amount="<%= @item.price %>"
-              data-currency="AUD"
-              data-locale="auto"></script>
-    <% end %>
+      <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+            <div id="error_explanation">
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+        </article>
+        <%= hidden_field_tag(:item_id, @item.id) %>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-description="<%= @item.name %>"
+                data-amount="<%= @item.price %>"
+                data-currency="AUD"
+                data-locale="auto"></script>
+      <% end %>
 
+    <% else %>
+    <strong>UNAVAILABLE: This listing is unfortunately unavailable for rent at the moment.</strong>
+  <% end %>
   <% else %>
-  <strong>UNAVAILABLE: This listing is unfortunately unavailable for rent at the moment.</strong>
+  <br><br>
+  <strong>Sign Up or Login to rent this item!</strong>
 <% end %>
-
 <br><br>
 <hr>
 <br>
