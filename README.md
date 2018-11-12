@@ -47,7 +47,8 @@ Help others, help yourself. Win-win.
     - **[Task Management](#Task-Management)**
     - **[Agile Methodologies](#Agile-Methodologies)**
     - **[Source Control](#Source-Control)**
-    - **[Deployment](#Deployment)**  
+    - **[Deployment](#Deployment)**
+    - **[UX/UI](#UX-UI)**
 - **[Testing and Information Security](#Testing-and-Information-Security)**
     - **[Testing](#Testing)**
     - **[Information Security Requirements](#Information-Security-Requirements)**
@@ -421,4 +422,4 @@ In a real-world use case scenario, the following situations would involve some e
 [Download PowerPoint](/app/assets/readme/Lendr.pdf)
 
 ## <a id="Conclusion"></a>Conclusion
-Overall, we were able to achieve the MVP version and concept of our application we envisioned.
+Overall, we were able to achieve the MVP version and concept of our application we envisioned. Given more time there were additional features and functionality we'd have like to been able to implement and some minor bugs to resolve however given the accelerated timeframe we were happy with what we were able to achieve.
