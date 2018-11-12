@@ -47,7 +47,8 @@ Help others, help yourself. Win-win.
     - **[Task Management](#Task-Management)**
     - **[Agile Methodologies](#Agile-Methodologies)**
     - **[Source Control](#Source-Control)**
-    - **[Deployment](#Deployment)**  
+    - **[Deployment](#Deployment)**
+    - **[UX/UI](#UX-UI)**
 - **[Testing and Information Security](#Testing-and-Information-Security)**
     - **[Testing](#Testing)**
     - **[Information Security Requirements](#Information-Security-Requirements)**
@@ -122,6 +123,7 @@ Call it minimalist, zero-waste or common sense living - let go of all the unnece
 ## <a id="Application"></a>Application
 ### <a id="Network-Infrastructure"></a>Network Infrastructure
 _Describe the network infrastructure the App may be based on._
+
 The current network infrastructure for Lendr was chosen based on what was most suitable for our MVP iteration. Future scalability (i.e. the servers used to manage requests and traffic and the potential for our application to grow and manage user requests per minute) was considered as an intellectual exercise but not required in actuality for our finished product.
 
 If the architecture of our server system did need to be scaled due to a dramatic increase in the number of requests coming through, there would be a few options:
@@ -182,6 +184,7 @@ The main benefits of using PostgreSQL are:
 
 #### <a id="Production-Database"></a>Production Database
 _Identify and describe the production database setup (i.e. postgres instance)._
+
 As Rails uses the Model-View-Controller architectural pattern to populate our application with database data, the database is represented as an abstraction of SQL through the model (which defines data structures and what data the application should store).
 
 As a database agnostic framework capable of being used with a variety of different databases, we opted to use PostgreSQL for our Rails application as it provides both a development version and a production version that can be managed through the ```database.yml``` file. 
@@ -220,6 +223,7 @@ has_and_belongs_to_many
 ```
 
 _Describe your project’s models in terms of the relationships (Active Record Associations) they have with each other._
+
 The associations between our Active Record models in Lendr are summarised below:
 
 **User**
@@ -332,6 +336,14 @@ After deploying to Heroku for the first time, we encountered a number of errors 
 
 Once our source code was more stable and CSS styling became more of a focus, the next deployment to Heroku was relatively successful and stable - the most challenging aspect of resolving these involved database errors, requiring us to edit, drop, reset and seed a number of tables. After some experimentation, we were able to successfully deploy our completed version to Heroku.
 
+### <a id="UX-UI"></a>UX/UI
+
+We chose to go with a monochrome colour palette, as it achieved both the minimalist and classic look and feel we were after, while also being a high contrast and highly readable and accessible, and would be more adaptable to a responsive design.
+
+|[![](/app/assets/readme/lendr-landing-desktop.png)]() | [![](/app/assets/readme/lendr-categories-desktop.png)]() |
+|-----------|-----------|
+![](/app/assets/readme/lendr-landing-mobile.png) | ![](/app/assets/readme/lendr-categories-mobile.png)|
+
 ## <a id="Testing-and-Information-Security"></a>Testing and Information Security
 ### <a id="Testing"></a>Testing
 _Provide an overview and description of your Testing process._
@@ -345,6 +357,7 @@ Understanding when, how and what to test proved to be the most challenging part.
 
 ### <a id="Information-Security-Requirements"></a>Information Security Requirements
 _Discuss and analyse requirements related to information system security._
+
 The digital economy is built on data that is being created, collected, combined and shared on a unprecedented scale in which traditional governance frameworks, cybersecurity and risk-mitigation strategies are insufficient. In the digital age, analysing and acting on insights from data can produce entirely new types of risk, including:
 * Unethical or illegal use of personal or corporate data
 * Biases that exacerbate issues of social and economic justice, profiling, etc.
@@ -368,6 +381,7 @@ For our MVP, the following Ruby gems and methods were used to protect informatio
 
 ### <a id="User-Data-Management"></a>User Data Management
 _Research what your legal obligations are in relation to handling user data._
+
 As legal obligations in relation to handling user data vary across different countries and jurisdictions, it is vital to check the laws and requirements for compliance. Legal obligations to consider in Australia include:
 * _Cookie Policy_: Website requirements to get consent from visitors to store or retrieve any information on a computer, smartphone or tablet for tracking purposes.
 * _Privacy Policy_: Disclosing the ways in which the a website gathers, uses, discloses and managers a visitor or customer's data and legal requirements to protect a user's privacy.
@@ -408,4 +422,4 @@ In a real-world use case scenario, the following situations would involve some e
 [Download PowerPoint](/app/assets/readme/Lendr.pdf)
 
 ## <a id="Conclusion"></a>Conclusion
-Overall, we were able to achieve the MVP version and concept of our application we envisioned.
+Overall, we were able to achieve the MVP version and concept of our application we envisioned. Given more time there were additional features and functionality we'd have like to been able to implement and some minor bugs to resolve however given the accelerated timeframe we were happy with what we were able to achieve.
