@@ -7,7 +7,7 @@ Lendr is a community-driven two-sided marketplace that lets you rent out your be
 Help others, help yourself. Win-win.
 
 ### Lendr Features
-* _Lend and Borrow Items_: sers can lend and and borrow belongings from other users nearby, setting their own daily rate, terms and conditions from a listing hosted on Lendr.
+* _Lend and Borrow Items_: Users can lend and and borrow belongings from other users nearby, setting their own daily rate, terms and conditions from a listing hosted on Lendr.
 * _Reviews_: Users acting as owners or borrowers in a transaction can mutually provide reviews to keep the Lendr community aware of good actors, and to encourage users to be good actors.
 * _Search_: Item search by keywords to ease the difficulty of browsing and finding items.
 * _Filter_: General search by category so users can search by category for a specific event or use case scenario.
